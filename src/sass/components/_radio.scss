@@ -1,0 +1,52 @@
+// Checkbox SCSS
+.radio-unit {
+    & input {
+        display: none;
+    }
+    & label {
+        display: flex;
+        cursor: pointer;
+        transition: 0.2s all ease;
+        font-size: 18px;
+        color: $gray-600;
+        @include tablet {
+            font-size: 16px;
+        }
+        & span {
+            border: 1.5px solid #D4D4D4;
+            transition: 0.2s all ease;
+            background-color: $white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            margin-right: 8px;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%) scale(0.5);
+                width: 12px;
+                height: 12px;
+                background-color: $white;
+                border-radius: 50%;
+                transition: 0.2s all ease;
+            }
+        }
+    }
+    & input:checked+label {
+        color: $primary;
+        & span {
+            border-color: $primary;
+            &::before {
+                background-color: $primary;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+    }
+}

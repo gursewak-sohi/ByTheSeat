@@ -1,0 +1,14 @@
+{
+    "name": "bytheseat",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "sass": "sass ./src/sass/main.scss ./assets/css/style.css --watch"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "swiper": "^8.3.2"
+    }
+}

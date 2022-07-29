@@ -1,0 +1,77 @@
+//  Ulilites SCSS
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    overflow: hidden;
+}
+
+.container {
+    max-width: $container;
+    padding-left: $gutter-x;
+    padding-right: $gutter-x;
+    margin: 0 auto;
+    @include laptop {
+        padding-left: $gutter-x-xs;
+        padding-right: $gutter-x-xs;
+    }
+}
+
+.dropdown-block {
+    position: relative;
+    & .dropdown {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        animation: moveUp 300ms ease;
+        box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.15);
+        z-index: 30;
+        &.active {
+            display: block;
+        }
+    }
+}
+
+.home-view {
+    animation: moveUp 500ms ease;
+}
+
+.results-view {
+    animation: moveUp 500ms ease;
+}
+
+header {
+    animation: moveDown 300ms ease;
+}
+
+.home {
+    & .home-view {
+        display: block;
+    }
+    & .home-header {
+        display: block;
+    }
+    & .results-view {
+        display: none;
+    }
+    & .results-header {
+        display: none;
+    }
+}
+
+.results {
+    & .results-view {
+        display: block;
+    }
+    & .home-view {
+        display: none;
+    }
+    & .home-header {
+        display: none;
+    }
+    & .results-header {
+        display: block;
+    }
+}

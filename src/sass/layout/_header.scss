@@ -1,0 +1,156 @@
+// Header SCSS
+.toggler {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    position: relative;
+    display: none;
+    margin-right: -5px;
+    @include tablet {
+        display: flex;
+    }
+    & svg {
+        & path {
+            will-change: transform;
+            transform-origin: center;
+            transition: $link-transition;
+            fill: $primary;
+        }
+    }
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 12px 0;
+    transition: 0.3s all ease;
+    & .logo {
+        display: flex;
+        z-index: 10;
+        position: relative;
+        @include tablet {
+            width: 80px;
+        }
+    }
+    &.active {
+        & .header-toggle-items {
+            visibility: visible;
+            opacity: 1;
+            transform: scaleY(1);
+        }
+        & .toggler {
+            & svg {
+                & path:first-child {
+                    opacity: 0;
+                }
+                & path:nth-child(2) {
+                    transform: rotateZ(-45deg) translate(1px, -7px);
+                }
+                & path:nth-child(3) {
+                    transform: rotateZ(45deg) translate(0px, 6px)
+                }
+            }
+        }
+    }
+    & .header-toggle-items {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        @include tablet {
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            background-color: $white;
+            left: 0;
+            right: 0;
+            padding: 72px 16px 24px;
+            box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px -1px rgba(16, 24, 40, 0.1);
+            visibility: hidden;
+            opacity: 0;
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: 0.3s all ease;
+        }
+        & ul {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            @include tablet {
+                flex-direction: column;
+                width: 100%;
+            }
+            & li {
+                margin: 0 24px;
+                @include tablet {
+                    width: 100%;
+                    text-align: center;
+                    margin-bottom: 24px;
+                }
+                & a {
+                    color: $gray-700;
+                    padding: 5px 0;
+                    display: block;
+                    &:hover {
+                        color: lighten($gray-700, 5%);
+                    }
+                    @include tablet {
+                        color: $gray-900;
+                        font-size: 18px;
+                        line-height: 24px;
+                        font-weight: 400;
+                        padding: 0;
+                        &:hover {
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .buttons {
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+        @include tablet {
+            flex-direction: column;
+            width: 100%;
+            & .btn {
+                width: 100%;
+            }
+            & .btn-primary {
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    transition: 0.3s all ease;
+    &.home-header {
+        background-color: rgba($white, 50%);
+    }
+    &.results-header {
+        & .header-nav {
+            padding: 28px 0;
+            @include tablet {
+                padding: 12px 0;
+            }
+        }
+    }
+    &.active {
+        background-color: $white;
+        padding: 0;
+        & .header-nav {
+            padding: 12px 0;
+        }
+    }
+}
