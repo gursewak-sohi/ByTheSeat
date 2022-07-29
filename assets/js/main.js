@@ -9,6 +9,16 @@
         direction: "prev",
     });
 
+    // Open Vip modal when about to close modal
+    let moveOnce = true;
+    const vipModal = document.querySelector("#vipModal");
+    document.body.addEventListener("mousemove", function(e) {
+        if (moveOnce && e.pageY < 10) {
+            moveOnce = false;
+            vipModal.classList.add('active');
+        }
+    });
+
     // Animate Floating Header On Scroll
     const header = document.querySelectorAll("header");
     if (header.length > 0) {
@@ -52,6 +62,19 @@
         }
     }
     toggleMenu('#toggleBtn', '#toggleNav');
+
+
+    // Close Modal
+    const closeModal = (closeBtn, modal) => {
+        let closeLink = document.querySelector(closeBtn),
+            modalItem = document.querySelector(modal);
+        if (closeLink && modalItem) {
+            closeLink.onclick = () => {
+                modalItem.classList.remove("active");
+            }
+        }
+    }
+    closeModal('#closeModal', '#vipModal');
 
     // Benefit Swiper
     const benefitSwiperID = document.getElementById('benefitSwiper');

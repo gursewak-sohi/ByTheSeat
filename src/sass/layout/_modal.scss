@@ -1,0 +1,93 @@
+// Modal SCSS
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: rgba($black, 80%);
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    display: flex;
+    transition: 0.3s all ease;
+    opacity: 0;
+    visibility: hidden;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        & .modal-block {
+            transform: translateY(0px);
+        }
+    }
+    & .modal-block {
+        background: $white;
+        box-shadow: 0px 20px 25px -5px rgba(16, 24, 40, 0.1), 0px 8px 10px -6px rgba(16, 24, 40, 0.1);
+        border-radius: 6px;
+        padding: 24px;
+        width: 100%;
+        max-width: 476px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        transition: 0.3s all ease;
+        transform: translateY(32px);
+        & .btn-close {
+            background-color: transparent;
+            border: none;
+            top: 24px;
+            right: 24px;
+            position: absolute;
+        }
+        & .modal-icon {
+            margin-bottom: 20px;
+        }
+        & h4 {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 28px;
+            color: $gray-900;
+            margin-bottom: 8px;
+        }
+        & p {
+            text-transform: capitalize;
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 16px;
+            color: #737373;
+        }
+        & .modal-form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            & .modal-field {
+                margin-bottom: 16px;
+                & input {
+                    font-size: 18px;
+                    line-height: 22px;
+                    width: 100%;
+                    padding: 8px 12px;
+                    border: 1px solid #A1B0CC;
+                    height: 48px;
+                    border-radius: 4px;
+                    &::placeholder {
+                        color: $gray-600;
+                        opacity: 1;
+                    }
+                    &:-ms-input-placeholder {
+                        color: $gray-600;
+                    }
+                    &::-ms-input-placeholder {
+                        color: $gray-600;
+                    }
+                }
+            }
+            & .btn-primary {
+                margin-top: 16px;
+            }
+        }
+    }
+}
