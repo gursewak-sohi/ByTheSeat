@@ -134,6 +134,7 @@
             height: 48px;
             @include tablet {
                 border-radius: 4px;
+                border-right: 1px solid $gray-200;
             }
             &::placeholder {
                 color: $gray-600;
