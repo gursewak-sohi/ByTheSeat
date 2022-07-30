@@ -9,7 +9,7 @@
  *
  * Released on: July 26, 2022
  */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Nunito+Sans:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap");
 @font-face {
   font-family: "swiper-icons";
   src: url("data:application/font-woff;charset=utf-8;base64, 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") format("woff");
@@ -2105,10 +2105,9 @@ header {
 }
 
 .btn-md {
-  font-family: "Inter", sans-serif;
   text-align: center;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   border-radius: 4px;
   padding: 11px 20px;
   display: inline-block;
@@ -2482,7 +2481,6 @@ footer {
   }
 }
 .footer-unit h4 {
-  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -2574,7 +2572,6 @@ footer {
   }
 }
 .footer-social h5 {
-  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -2608,7 +2605,6 @@ footer {
   }
 }
 .footer-payments h5 {
-  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -2709,7 +2705,6 @@ footer {
 }
 .footer-bottom ul li a {
   display: block;
-  font-family: "Inter", sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
@@ -2719,7 +2714,6 @@ footer {
   color: #545964;
 }
 .footer-bottom p {
-  font-family: "Inter", sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: #9CA3AF;
@@ -2843,14 +2837,14 @@ footer {
   position: absolute;
   background-image: url(../../assets/images/home/hero-bg.jpg);
   z-index: -1;
-  width: 2285px;
-  height: 1203px;
+  width: 4380px;
+  height: 1100px;
   background-size: 100% 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-top: -55px;
-  margin-left: 70px;
+  margin-top: 0;
+  margin-left: 240px;
 }
 @media (max-width: 1024px) {
   .hero-section::before {
@@ -3095,7 +3089,7 @@ footer {
   flex-direction: column;
 }
 .deal-block .deal-head {
-  margin-bottom: 46px;
+  margin-bottom: 52px;
 }
 @media (max-width: 1024px) {
   .deal-block .deal-head {
@@ -3159,7 +3153,7 @@ footer {
 
 .benefit-section {
   background-color: #F9FAFB;
-  padding: 64px 0;
+  padding: 64px 0 54px;
 }
 @media (max-width: 1024px) {
   .benefit-section {
@@ -3294,13 +3288,11 @@ footer {
   font-size: 24px;
   line-height: 32px;
   letter-spacing: -0.02em;
-  font-family: "Inter", sans-serif;
   margin-bottom: 4px;
 }
 .statistics-block .statistics-unit .statistics-text p {
   font-size: 14px;
   line-height: 20px;
-  font-family: "Inter", sans-serif;
   color: #737373;
 }
 
@@ -3396,7 +3388,6 @@ footer {
   margin-bottom: 16px;
 }
 .destination-body .destination-unit .destination-text p {
-  font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: #737373;
@@ -3648,13 +3639,11 @@ footer {
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  font-family: "Inter", sans-serif;
 }
 .feedback-list .feedback-unit .feedback-content .feedback-head p {
   font-size: 14px;
   line-height: 20px;
   color: #737373;
-  font-family: "Inter", sans-serif;
 }
 .feedback-list .feedback-unit .feedback-content .feedback-body {
   margin-top: 24px;
@@ -3750,7 +3739,6 @@ footer {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  font-family: "Inter", sans-serif;
   margin-bottom: 24px;
   color: #6B7280;
 }
@@ -4074,7 +4062,6 @@ footer {
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  font-family: "Inter", sans-serif;
   padding: 3px 12px;
   border: 1px solid rgba(39, 39, 63, 0.5);
   border-radius: 24px;

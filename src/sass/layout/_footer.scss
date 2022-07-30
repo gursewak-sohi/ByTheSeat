@@ -35,7 +35,6 @@ footer {
         margin-bottom: 32px;
     }
     & h4 {
-        font-family: $font-inter;
         font-size: 16px;
         font-weight: 500;
         line-height: 24px;
@@ -119,7 +118,6 @@ footer {
         margin-bottom: 23px;
     }
     & h5 {
-        font-family: $font-inter;
         font-weight: 500;
         font-size: 16px;
         line-height: 24px;
@@ -151,7 +149,6 @@ footer {
         margin-bottom: 32px;
     }
     & h5 {
-        font-family: $font-inter;
         font-weight: 500;
         font-size: 16px;
         line-height: 24px;
@@ -234,7 +231,6 @@ footer {
             }
             & a {
                 display: block;
-                font-family: $font-inter;
                 font-size: 14px;
                 font-weight: 500;
                 line-height: 20px;
@@ -246,7 +242,6 @@ footer {
         }
     }
     & p {
-        font-family: $font-inter;
         font-size: 14px;
         line-height: 20px;
         color: #9CA3AF;
