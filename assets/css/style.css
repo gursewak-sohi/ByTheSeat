@@ -3007,6 +3007,7 @@ footer {
   color: #7C8DB0;
   display: flex;
   align-items: center;
+  font-family: "Nunito Sans", sans-serif;
 }
 @media (max-width: 1024px) {
   .search-box .search-field .dropdown-block .btn-dropdown {

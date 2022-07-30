@@ -171,6 +171,7 @@
                 color: $gray-600;
                 display: flex;
                 align-items: center;
+                font-family: $font-nunito;
                 @include tablet {
                     border-right: 1px solid $gray-200;
                     border-radius: 4px;
