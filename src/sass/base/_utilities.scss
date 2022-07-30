@@ -25,7 +25,7 @@ main {
         top: 0;
         left: 0;
         display: none;
-        animation: moveUp 300ms ease;
+        animation: moveUpLess 300ms ease;
         box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.15);
         z-index: 30;
         &.active {
@@ -34,16 +34,21 @@ main {
     }
 }
 
-.home-view {
-    animation: moveUp 500ms ease;
+// .home-view {
+//     animation: moveUp 500ms ease;
+// }
+.search-block {
+    animation: moveUp 700ms ease;
 }
 
-.results-view {
-    animation: moveUp 500ms ease;
+.back-to-home {
+    & .search-block {
+        animation: moveDown 500ms ease;
+    }
 }
 
 header {
-    animation: moveDown 300ms ease;
+    animation: fadeIn 800ms linear;
 }
 
 .home {
@@ -55,6 +60,9 @@ header {
     }
     & .results-view {
         display: none;
+        & .search-block {
+            display: none;
+        }
     }
     & .results-header {
         display: none;
@@ -64,6 +72,9 @@ header {
 .results {
     & .results-view {
         display: block;
+        & .search-block {
+            display: flex;
+        }
     }
     & .home-view {
         display: none;

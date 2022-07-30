@@ -24,23 +24,11 @@
     if (header.length > 0) {
         window.onscroll = () => scrollFunction();
         const scrollFunction = () => {
-            if (window.innerWidth > 1024) {
-                for (var i = 0; i < header.length; i++) {
-                    if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
-                        header[i].classList.add('active');
-                    } else {
-                        header[i].classList.remove('active');
-                    }
-                }
-
-            }
-            if (window.innerWidth <= 1024) {
-                for (var i = 0; i < header.length; i++) {
-                    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-                        header[i].classList.add('active');
-                    } else {
-                        header[i].classList.remove('active');
-                    }
+            for (var i = 0; i < header.length; i++) {
+                if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+                    header[i].classList.add('active');
+                } else {
+                    header[i].classList.remove('active');
                 }
             }
         }
@@ -202,14 +190,21 @@
             searchBtn.onclick = () => {
                 document.body.scrollTop = 0;
                 document.documentElement.scrollTop = 0;
-                document.body.classList.remove('home');
-                document.body.classList.add('results');
+                setTimeout(() => {
+                    document.body.classList.remove('home');
+                    document.body.classList.add('results');
+                }, 0);
             }
             resultBtn.onclick = () => {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
-                document.body.classList.add('home');
-                document.body.classList.remove('results');
+                document.body.classList.add('back-to-home');
+                setTimeout(() => {
+                    document.body.scrollTop = 250;
+                    document.documentElement.scrollTop = 250;
+                    document.body.classList.add('home');
+                    document.body.classList.remove('results');
+                    document.body.classList.remove('back-to-home');
+                }, 300);
+
             }
         }
     }
