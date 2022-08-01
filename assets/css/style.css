@@ -3286,12 +3286,12 @@ footer {
   background-color: #FFFFFF;
   width: 100%;
 }
-.statistics-block .statistics-unit:not(:last-child) {
-  margin-bottom: 12px;
-}
 @media (max-width: 1024px) {
   .statistics-block .statistics-unit {
     width: 280px;
+  }
+  .statistics-block .statistics-unit:not(:last-child) {
+    margin-bottom: 12px;
   }
 }
 .statistics-block .statistics-unit .statistics-icon {

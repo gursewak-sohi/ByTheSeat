@@ -402,11 +402,11 @@
         padding: 22px 24px;
         background-color: $white;
         width: 100%;
-        &:not(:last-child) {
-            margin-bottom: 12px;
-        }
         @include tablet {
             width: 280px;
+            &:not(:last-child) {
+                margin-bottom: 12px;
+            }
         }
         & .statistics-icon {
             margin-right: 24px;
