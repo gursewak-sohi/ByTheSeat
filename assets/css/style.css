@@ -2863,14 +2863,15 @@ footer {
   position: absolute;
   background-image: url(../../assets/images/home/hero-bg.jpg);
   z-index: -1;
-  width: 4380px;
-  height: 1100px;
-  background-size: 100% 100%;
+  width: 2403px;
+  height: 1113px;
+  background-size: 127%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-top: 0;
-  margin-left: 240px;
+  margin-top: -10px;
+  margin-left: 25px;
+  background-position: center center;
 }
 @media (max-width: 1024px) {
   .hero-section::before {
@@ -3116,7 +3117,7 @@ footer {
   flex-direction: column;
 }
 .deal-block .deal-head {
-  margin-bottom: 52px;
+  margin-bottom: 48px;
 }
 @media (max-width: 1024px) {
   .deal-block .deal-head {
