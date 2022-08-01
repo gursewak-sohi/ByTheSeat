@@ -2455,6 +2455,7 @@ header.results-header .header-nav {
 header.active {
   background-color: #FFFFFF;
   padding: 0;
+  box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px -1px rgba(16, 24, 40, 0.1);
 }
 header.active .header-nav {
   padding: 12px 0;
