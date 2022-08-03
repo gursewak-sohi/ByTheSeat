@@ -13,10 +13,11 @@ footer {
 .footer-top {
     max-width: 1216px;
     margin: 0 auto;
-    padding: 74px 0 3px;
+    padding: 74px 0 30px;
     display: grid;
-    grid-template-columns: 1.6fr 1fr 1fr;
-    column-gap: 131px;
+    grid-template-columns: 2.25fr 1fr;
+    column-gap: 50px;
+    row-gap: 25px;
     @include laptop {
         column-gap: 70px;
     }
@@ -30,6 +31,7 @@ footer {
     display: flex;
     flex-direction: column;
     @include tablet {
+        align-items: center;
         order: 1;
         text-align: center;
         margin-bottom: 32px;
@@ -46,6 +48,7 @@ footer {
         font-size: 16px;
         line-height: 24px;
         color: $gray-500;
+        max-width: 510px;
     }
 }
 
@@ -53,9 +56,10 @@ footer {
     display: flex;
     flex-direction: column;
     grid-row-end: 3;
-    grid-column-start: 3;
-    grid-column-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
     grid-row-start: 1;
+    justify-content: space-between;
     @include tablet {
         grid-row-end: unset;
         grid-column-start: unset;
@@ -64,8 +68,22 @@ footer {
         align-items: center;
         text-align: center;
     }
+    & .powered-by {
+        & h4 {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            padding: 10px;
+            color: #9CA3AF;
+        }
+    }
     & .logo {
         margin-bottom: 25px;
+        width: 216px;
+        display: inline-block;
+        & img {
+            @extend %object-cover;
+        }
     }
     & p {
         font-size: 14px;
@@ -109,44 +127,11 @@ footer {
     }
 }
 
-.footer-social {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
-    @include tablet {
-        align-items: center;
-        margin-bottom: 23px;
-    }
-    & h5 {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 24px;
-        color: $gray-400;
-        margin-bottom: 15px;
-    }
-    & ul {
-        display: flex;
-        align-items: center;
-        & a {
-            display: block;
-            margin-right: 16px;
-            & svg path {
-                transition: $link-transition;
-            }
-            &:hover svg path {
-                fill: $primary;
-            }
-        }
-    }
-}
-
 .footer-payments {
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
     @include tablet {
         align-items: center;
-        margin-bottom: 32px;
     }
     & h5 {
         font-weight: 500;
@@ -173,8 +158,8 @@ footer {
     display: flex;
     align-items: center;
     grid-column-start: 1;
-    grid-column-end: 3;
-    margin-left: 12px;
+    grid-column-end: 2;
+    margin-left: 21px;
     margin-top: 28px;
     @include laptop {
         grid-column-end: 4;
@@ -191,7 +176,7 @@ footer {
         border-bottom: 1px solid #E4E7EC;
     }
     & li:not(:last-child) {
-        margin-right: 45px;
+        margin-right: 50px;
         @include tablet {
             margin-right: 0;
             margin-bottom: 32px;
