@@ -13,11 +13,10 @@ footer {
 .footer-top {
     max-width: 1216px;
     margin: 0 auto;
-    padding: 74px 0 30px;
+    padding: 74px 0 3px;
     display: grid;
-    grid-template-columns: 2.25fr 1fr;
-    column-gap: 50px;
-    row-gap: 25px;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    column-gap: 131px;
     @include laptop {
         column-gap: 70px;
     }
@@ -25,6 +24,23 @@ footer {
         grid-template-columns: 1fr;
         padding: 30px 0 3px;
         row-gap: 0;
+    }
+}
+
+.footer-inner {
+    & .footer-top {
+        padding: 74px 0 30px;
+        grid-template-columns: 2.25fr 1fr;
+        column-gap: 50px;
+        row-gap: 25px;
+        @include laptop {
+            column-gap: 70px;
+        }
+        @include tablet {
+            grid-template-columns: 1fr;
+            padding: 30px 0 3px;
+            row-gap: 0;
+        }
     }
 }
 
@@ -53,12 +69,23 @@ footer {
     }
 }
 
+.footer-inner {
+    & .footer-unit {
+        @include tablet {
+            align-items: center;
+        }
+        & p {
+            max-width: 510px;
+        }
+    }
+}
+
 .footer-content {
     display: flex;
     flex-direction: column;
     grid-row-end: 3;
-    grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
     grid-row-start: 1;
     justify-content: space-between;
     @include tablet {
@@ -68,30 +95,93 @@ footer {
         grid-row-start: unset;
         align-items: center;
         text-align: center;
-        margin-bottom: 32px;
-    }
-    & .powered-by {
-        & h4 {
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 24px;
-            padding: 10px;
-            color: #9CA3AF;
-        }
+        margin-bottom: 0;
     }
     & .logo {
         margin-bottom: 25px;
-        width: 216px;
-        display: inline-block;
-        & img {
-            @extend %object-cover;
-        }
     }
     & p {
         font-size: 14px;
         line-height: 20px;
         color: #374151;
         margin-bottom: 24px;
+    }
+}
+
+.footer-inner {
+    & .footer-content {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        @include tablet {
+            grid-row-end: unset;
+            grid-column-start: unset;
+            grid-column-end: unset;
+            grid-row-start: unset;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        & .powered-by {
+            @include tablet {
+                display: flex;
+                align-items: center;
+                margin-bottom: 32px;
+            }
+            & h4 {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+                padding: 10px;
+                color: #9CA3AF;
+                @include tablet {
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: $gray-700;
+                }
+            }
+        }
+        & .logo {
+            width: 216px;
+            display: inline-block;
+            @include tablet {
+                margin-bottom: 0;
+                width: 141px;
+            }
+            & img {
+                @extend %object-cover;
+            }
+        }
+    }
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    @include tablet {
+        align-items: center;
+        margin-bottom: 23px;
+    }
+    & h5 {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: $gray-400;
+        margin-bottom: 15px;
+    }
+    & ul {
+        display: flex;
+        align-items: center;
+        & a {
+            display: block;
+            margin-right: 16px;
+            & svg path {
+                transition: $link-transition;
+            }
+            &:hover svg path {
+                fill: $primary;
+            }
+        }
     }
 }
 
@@ -132,8 +222,10 @@ footer {
 .footer-payments {
     display: flex;
     flex-direction: column;
+    margin-bottom: 40px;
     @include tablet {
         align-items: center;
+        margin-bottom: 32px;
     }
     & h5 {
         font-weight: 500;
@@ -156,12 +248,22 @@ footer {
     }
 }
 
+.footer-inner {
+    & .footer-payments {
+        margin-bottom: 0;
+        @include tablet {
+            margin-bottom: 0;
+            align-items: center;
+        }
+    }
+}
+
 .footer-companies {
     display: flex;
     align-items: center;
     grid-column-start: 1;
-    grid-column-end: 2;
-    margin-left: 21px;
+    grid-column-end: 3;
+    margin-left: 12px;
     margin-top: 28px;
     @include laptop {
         grid-column-end: 4;
@@ -178,10 +280,39 @@ footer {
         border-bottom: 1px solid #E4E7EC;
     }
     & li:not(:last-child) {
-        margin-right: 50px;
+        margin-right: 45px;
         @include tablet {
             margin-right: 0;
             margin-bottom: 32px;
+        }
+    }
+}
+
+.footer-inner {
+    & .footer-companies {
+        grid-column-end: 2;
+        margin-left: 21px;
+        @include laptop {
+            grid-column-end: 2;
+            margin-top: 28px;
+            margin-bottom: 0;
+        }
+        @include tablet {
+            grid-column-start: unset;
+            grid-column-end: unset;
+            flex-direction: column;
+            margin-left: 0;
+            margin-top: 32px;
+            padding-bottom: 30px;
+            margin-bottom: 32px;
+            border-bottom: 1px solid #E4E7EC;
+        }
+        & li:not(:last-child) {
+            margin-right: 50px;
+            @include tablet {
+                margin-right: 0;
+                margin-bottom: 32px;
+            }
         }
     }
 }
