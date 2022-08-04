@@ -12,12 +12,15 @@
     // Open Vip modal when about to close modal
     let moveOnce = true;
     const vipModal = document.querySelector("#vipModal");
-    document.body.addEventListener("mousemove", function(e) {
-        if (moveOnce && e.pageY < 10) {
-            moveOnce = false;
-            vipModal.classList.add('active');
-        }
-    });
+    if (vipModal) {
+        document.body.addEventListener("mousemove", function(e) {
+            if (moveOnce && e.pageY < 10) {
+                moveOnce = false;
+                vipModal.classList.add('active');
+            }
+        });
+    }
+
 
     // Animate Floating Header On Scroll
     const header = document.querySelectorAll("header");
@@ -63,6 +66,24 @@
         }
     }
     closeModal('#closeModal', '#vipModal');
+
+    // Tooltip 
+    const tooltipShow = (tooltipbtn, tooltip) => {
+        let tooltipLink = document.querySelector(tooltipbtn),
+            tooltipItem = document.querySelector(tooltip);
+        if (tooltipLink && tooltipItem) {
+            tooltipLink.onclick = () => {
+                if (tooltipItem.classList.contains('active')) {
+                    tooltipItem.classList.remove("active");
+                } else {
+                    tooltipItem.classList.add("active");
+
+                }
+            }
+        }
+    }
+    tooltipShow('[data-btn="tooltip"]', '[data-block="tooltip"]');
+
 
     // Benefit Swiper
     const benefitSwiperID = document.getElementById('benefitSwiper');
@@ -176,7 +197,7 @@
     if (playGallery.length) {
         for (var i = 0; i < playGallery.length; i++) {
             playGallery[i].onclick = (el) => {
-                el.currentTarget.closest('.result-gallery').querySelector('.result-image img').click();
+                el.currentTarget.closest('.light-gallery-wrapper').querySelector('a img').click();
             }
         }
     }

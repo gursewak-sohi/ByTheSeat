@@ -154,4 +154,9 @@ header {
             padding: 12px 0;
         }
     }
+    &.inner-header {
+        position: absolute;
+        background-color: transparent;
+        box-shadow: none;
+    }
 }
