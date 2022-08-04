@@ -72,13 +72,16 @@
         let tooltipLink = document.querySelector(tooltipbtn),
             tooltipItem = document.querySelector(tooltip);
         if (tooltipLink && tooltipItem) {
-            tooltipLink.onclick = () => {
+            tooltipLink.onclick = (e) => {
+                e.stopPropagation();
                 if (tooltipItem.classList.contains('active')) {
                     tooltipItem.classList.remove("active");
                 } else {
                     tooltipItem.classList.add("active");
-
                 }
+            }
+            document.onclick = () => {
+                tooltipItem.classList.remove("active");
             }
         }
     }
