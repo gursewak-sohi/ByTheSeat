@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByTheSeat</title>
+    <link rel="shortcut icon" href="assets/images/svg/favicon.svg" />
+    <!-- Bundle CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="home">
+    <!-- Header  Section -->
+    <header class="inner-header">
+        <div class="container">
+            <!-- Results header -->
+            <nav class="header-nav">
+                <a class="logo" href="index.html">
+                    <img src="assets/images/logo.png" width="132" height="51" alt="icon" />
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <!-- Booking Section -->
+        <section class="booking-section">
+            <div class="container">
+                <div class="booking-block">
+                    <div class="booking-content">
+                        <div class="search-query">
+                            <div class="search-type">
+                                <div class="search-location">
+                                    <div class="search-location-unit">
+                                        <h4>SFO</h4>
+                                        <p>California, US</p>
+                                    </div>
+                                    <div class="search-location-to">
+                                        <img src="assets/images/svg/arrow-right.svg" alt="icon" />
+                                    </div>
+                                    <div class="search-location-unit">
+                                        <h4>OPE</h4>
+                                        <p>Maimi, US</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="search-units">
+                                <div id="departBlock" class="search-date">
+                                    <h5>Feb 25<span> 7:00AM</span> </h5>
+                                    <p>Departing <img id="arivalBtn" src="assets/images/svg/down.svg" alt="icon" /></p>
+                                </div>
+                                <div id="arivalBlock" class="search-date">
+                                    <h5>Mar 21<span> 12:15PM</span> </h5>
+                                    <p>Arriving <img id="departBtn" src="assets/images/svg/up.svg" alt="icon" /></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="booking-header">
+                            <div class="booking-avaition">
+                                <p>Direct Air Carrier: <b>Pegasus Elite Aviation</b> </p>
+                                <p> Public Charter Operator:<b> V-Stream Aviation</b></p>
+                            </div>
+                            <div class="booking-steps">
+                                <ul>
+                                    <li class="completed">
+                                        <a href="javascript:;">
+                                            <p>01</p>
+                                            <h5>Seats</h5>
+                                        </a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="javascript:;">
+                                            <p>02</p>
+                                            <h5>Details</h5>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <p>03</p>
+                                            <h5>Confirm</h5>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="details-block">
+                            <div class="passenger-block">
+                                <div class="passenger-header">
+                                    <div class="passenger-info">
+                                        <img src="assets/images/svg/info.svg" alt="icon" /> Please fill in all of the following fields
+                                    </div>
+
+                                </div>
+                                <div class="passenger-body">
+                                    <div class="passenger-seat-head">
+                                        <div class="passenger-seat">
+                                            <img src="assets/images/svg/passenger.svg" alt="icon" />Passenger 1 (Seat 1A)
+                                        </div>
+                                        <div class="passenger-skip">
+                                            <div class="checkbox-unit">
+                                                <input id="skip-1" type="checkbox">
+                                                <label for="skip-1">
+                                                    <span>
+                                                        <svg width="14" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M5.494 12.203c.403 0 .718-.157.937-.485l6.398-9.899c.164-.246.226-.465.226-.676 0-.54-.397-.93-.95-.93-.383 0-.616.137-.848.506l-5.79 9.174L2.5 6.133c-.226-.28-.458-.404-.793-.404-.56 0-.964.397-.964.944 0 .24.082.465.28.704l3.541 4.361c.26.322.547.465.93.465Z" fill="#fff" fill-rule="nonzero"></path></svg>
+                                                      </span>
+                                                      Skip this passanger details 
+                                                </label>
+                                            </div>
+                                            <button class="details">
+                                                <img src="assets/images/svg/question.svg" alt="icon"/>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="passenger-fields">
+                                        <div class="form-unit">
+                                            <input type="text" placeholder="First name*">
+                                        </div>
+                                        <div class="form-unit">
+                                            <input type="text" placeholder="Last name*">
+                                        </div>
+                                        <div class="form-unit">
+                                            <input type="text" placeholder="Email*">
+                                        </div>
+                                        <div class="form-unit">
+                                            <input type="text" placeholder="Phone number*">
+                                        </div>
+                                        <div class="form-radio">
+                                            <h5>*Gender</h5>
+                                            <div class="radio-unit">
+                                                <input id="male-1" type="radio" name="gender-1" checked="">
+                                                <label for="male-1">
+                                                    <span></span>Male
+                                                </label>
+                                            </div>
+                                            <div class="radio-unit">
+                                                <input id="female-1" type="radio" name="gender-1">
+                                                <label for="female-1">
+                                                    <span></span>Female
+                                                </label>
+                                            </div>
+                                            <div class="radio-unit">
+                                                <input id="other-1" type="radio" name="gender-1">
+                                                <label for="other-1">
+                                                    <span></span>Other
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-select">
+                                            <h5>Date of birth</h5>
+                                            <div class="select-unit">
+                                                <select name="" id="" required="">
+                                                    <option value="" disabled="" selected="" hidden="">Day</option>
+                                                    <option value="">01</option>
+                                                    <option value="">02</option>
+                                                    <option value="">03</option>
+                                                    <option value="">04</option>
+                                                </select>
+                                            </div>
+                                            <div class="select-unit">
+                                                <select name="" id="" required="">
+                                                    <option value="" disabled="" selected="" hidden="">Month</option>
+                                                    <option value="">01</option>
+                                                    <option value="">02</option>
+                                                    <option value="">03</option>
+                                                    <option value="">04</option>
+                                                </select>
+                                            </div>
+                                            <div class="select-unit">
+                                                <select name="" id="" required="">
+                                                    <option value="" disabled="" selected="" hidden="">Year</option>
+                                                    <option value="">1990</option>
+                                                    <option value="">1991</option>
+                                                    <option value="">1992</option>
+                                                    <option value="">1993</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="passenger-body">
+                                    <div class="passenger-seat-head">
+                                        <div class="passenger-seat">
+                                            <img src="assets/images/svg/passenger.svg" alt="icon" />Passenger 2 (Seat 2A)
+                                        </div>
+                                        <div class="passenger-skip">
+                                            <div class="checkbox-unit">
+                                                <input id="skip-2" type="checkbox">
+                                                <label for="skip-2">
+                                                    <span>
+                                                        <svg width="14" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M5.494 12.203c.403 0 .718-.157.937-.485l6.398-9.899c.164-.246.226-.465.226-.676 0-.54-.397-.93-.95-.93-.383 0-.616.137-.848.506l-5.79 9.174L2.5 6.133c-.226-.28-.458-.404-.793-.404-.56 0-.964.397-.964.944 0 .24.082.465.28.704l3.541 4.361c.26.322.547.465.93.465Z" fill="#fff" fill-rule="nonzero"></path></svg>
+                                                      </span>
+                                                      Skip this passanger details 
+                                                </label>
+                                            </div>
+                                            <button class="details">
+                                                <img src="assets/images/svg/question.svg" alt="icon"/>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="passenger-fields">
+                                        <div class="form-unit">
+                                            <input type="text" placeholder="First name*">
+                                        </div>
+                                        <div class="form-unit">
+                                            <input type="text" placeholder="Last name*">
+                                        </div>
+                                        <div class="form-unit">
+                                            <input type="text" placeholder="Email*">
+                                        </div>
+                                        <div class="form-unit">
+                                            <input type="text" placeholder="Phone number*">
+                                        </div>
+                                        <div class="form-radio">
+                                            <h5>Gender</h5>
+                                            <div class="radio-unit">
+                                                <input id="male-2" type="radio" name="gender-2" checked="">
+                                                <label for="male-2">
+                                                    <span></span>Male
+                                                </label>
+                                            </div>
+                                            <div class="radio-unit">
+                                                <input id="female-2" type="radio" name="gender-2">
+                                                <label for="female-2">
+                                                    <span></span>Female
+                                                </label>
+                                            </div>
+                                            <div class="radio-unit">
+                                                <input id="other-2" type="radio" name="gender-2">
+                                                <label for="other-2">
+                                                    <span></span>Other
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-select">
+                                            <h5>Date of birth</h5>
+                                            <div class="select-unit">
+                                                <select name="" id="" required="">
+                                                    <option value="" disabled="" selected="" hidden="">Day</option>
+                                                    <option value="">01</option>
+                                                    <option value="">02</option>
+                                                    <option value="">03</option>
+                                                    <option value="">04</option>
+                                                </select>
+                                            </div>
+                                            <div class="select-unit">
+                                                <select name="" id="" required="">
+                                                    <option value="" disabled="" selected="" hidden="">Month</option>
+                                                    <option value="">01</option>
+                                                    <option value="">02</option>
+                                                    <option value="">03</option>
+                                                    <option value="">04</option>
+                                                </select>
+                                            </div>
+                                            <div class="select-unit">
+                                                <select name="" id="" required="">
+                                                    <option value="" disabled="" selected="" hidden="">Year</option>
+                                                    <option value="">1990</option>
+                                                    <option value="">1991</option>
+                                                    <option value="">1992</option>
+                                                    <option value="">1993</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pet-block">
+                                    <div class="pet-heading">
+                                        <img src="assets/images/svg/paws.svg" alt="icon" /> Pet-friendly flight
+                                    </div>
+                                    <div class="pet-body">
+                                        <div class="pet-radio">
+                                            <h5>Are you bringing your pet on board?</h5>
+                                            <div class="radio-unit">
+                                                <input id="petNo" type="radio" name="pet" checked="">
+                                                <label for="petNo">
+                                                    <span></span>No
+                                                </label>
+                                            </div>
+                                            <div class="radio-unit">
+                                                <input id="petYes" type="radio" name="pet">
+                                                <label for="petYes">
+                                                    <span></span>Yes
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="pet-additional">
+                                            <div class="pet-select">
+                                                <h5>How many pets?</h5>
+                                                <div class="select-unit">
+                                                    <select name="" id="" required="">
+                                                        <option value="" disabled="" selected="" hidden="">1</option>
+                                                        <option value="">1</option>
+                                                        <option value="">2</option>
+                                                        <option value="">3</option>
+                                                        <option value="">4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="pet-extra">
+                                                <h5>Extry pay:</h5>
+                                                <h4>$500</h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="pet-footer">
+                                        <h4>*Please note!</h4>
+                                        <p>All pets must be carrierd in their cage/crate/carry or on their leash. </p>
+                                        <p> You are responsible for the pet’s safety, health and well-being on board the flight.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="bookingFooter" class="booking-footer">
+                            <div class="booking-flight-type">
+                                <p>Type of flight:</p>
+                                <div class="booking-seat" data-btn="tooltip">
+                                    <div class="booking-seat-btn">
+                                        <img src="assets/images/svg/check.svg" alt="icon" /> By The Seat
+                                    </div>
+                                    <div class="booking-hint">
+                                        <img src="assets/images/svg/question.svg" alt="icon">
+                                    </div>
+                                    <div data-block="tooltip" class="tooltip">
+                                        <span>This flight has been approved, you will not have to wait for it to fill up the jet.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="booking-details">
+                                <div class="unit">
+                                    <h5>Price per seat:</h5>
+                                    <h4>$4,500</h4>
+                                </div>
+                                <div class="unit">
+                                    <h5>Passengers</h5>
+                                    <h4>02</h4>
+                                </div>
+                                <div class="unit">
+                                    <h5>Total trip</h5>
+                                    <h4>$9,000</h4>
+                                </div>
+                            </div>
+                            <div class="booking-btns">
+                                <button class="btn btn-light-outline btn-md">Back</button>
+                                <button class="btn btn-primary btn-md">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Section -->
+        <section class="support-section">
+            <div class="container">
+                <div class="support-block">
+                    <div class="support-unit">
+                        <h5>Need help?</h5>
+                        <a class="support-content" href="javascript:;">
+                            <img src="assets/images/svg/support.svg" alt="icon" />Support Center
+                        </a>
+                    </div>
+                    <div class="support-unit">
+                        <h5>Email us:</h5>
+                        <a class="support-content" href="mailto:Support@bytheseat.com">
+                            <img src="assets/images/svg/emailsvg.svg" alt="icon" />Support@bytheseat.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-inner">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-unit">
+                    <h4>DISCLAIMER</h4>
+                    <p>Imperium Jets Inc is not an Air Carrier nor an Operator. Imperium Jets does not own or operate any aircraft. Operational control of all charter flights is provided by FAR Part 135 or 121 air carriers or the foreign equivalent. All
+                        services are subject to the terms and conditions.</p>
+                </div>
+
+                <div class="footer-content">
+                    <div class="powered-by">
+                        <h4>Powered by</h4>
+                        <a class="logo" href="index.html">
+                            <img src="assets/images/svg/logo-blue.svg" alt="logo" />
+                        </a>
+                    </div>
+                    <div class="footer-payments">
+                        <h5>Payments methods</h5>
+                        <ul>
+                            <li><img src="assets/images/home/cards/master.svg" alt="master"></li>
+                            <li><img src="assets/images/home/cards/visa.svg" alt="visa"></li>
+                            <li><img src="assets/images/home/cards/amex.svg" alt="amex"></li>
+                            <li><img src="assets/images/home/cards/paypal.svg" alt="paypal"></li>
+                            <li><img src="assets/images/home/cards/bitcoin.svg" alt="bitcoin"></li>
+                            <li><img src="assets/images/home/cards/discover.svg" alt="discover"></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="footer-companies">
+                    <li><img src="assets/images/home/companies/bbb.svg" width="116" height="43" alt="bbb"></li>
+                    <li><img src="assets/images/home/companies/nbaa.png" width="129" height="30" alt="nbaa"></li>
+                    <li><img src="assets/images/home/companies/dot.png" width="194" height="57" alt="dot"></li>
+                    <li><img src="assets/images/home/companies/excellece.svg" width="127" height="34" alt="review"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="footer-bottom">
+                    <ul>
+                        <li><a href="javascript:;">Terms of Service</a></li>
+                        <li><a href="javascript:;">Terms of Flight</a></li>
+                        <li><a href="javascript:;">Privacy</a></li>
+                        <li><a href="javascript:;">Cookies</a></li>
+                        <li><a href="javascript:;">Covid-19 Guidelines</a></li>
+                    </ul>
+                    <div class="external-links">
+                        <p>© 2022 Imperiun jets. All rights reserved.</p>
+                        <div>
+                            <a href="https://tcrcinfo.org/" target="_blank">TCRC</a> ID: #708461 / <a href="https://oag.ca.gov/travel" target="_blank">Seller of Travel</a> ID: #2146363-40
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+<!-- JQuery  -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<!-- Light Box JS -->
+<script type="text/javascript" src="assets/js/lightgallery.min.js"></script>
+<!-- Light Box Plugin JS -->
+<script type="text/javascript" src="assets/js/video.js"></script>
+<script type="text/javascript" src="assets/js/lg-zoom.min.js"></script>
+<script type="text/javascript" src="assets/js/lg-thumbnail.min.js"></script>
+<!-- Custom JS -->
+<script type="text/javascript" src="assets/js/main.js"></script>
+
+</html>

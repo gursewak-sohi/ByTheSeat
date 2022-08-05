@@ -71,3 +71,13 @@
         color: $gray-800;
     }
 }
+
+.btn-light-outline {
+    background-color: transparent;
+    color: $gray-600;
+    border: 1px solid $gray-600;
+    &:hover {
+        background-color: lighten($gray-600, 35%);
+        color: $gray-600;
+    }
+}
