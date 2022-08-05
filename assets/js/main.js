@@ -195,6 +195,10 @@
             lightGallery(gallery[i], {
                 plugins: [lgZoom, lgThumbnail],
                 speed: 500,
+                mobileSettings: {
+                    controls: true,
+                    showCloseIcon: true,
+                },
             });
         }
     }
