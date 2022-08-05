@@ -1,13 +1,17 @@
 (function() {
     // Deal carouselTicker Init
-    $("#dealScroll").carouselTicker({
-        direction: "prev",
-    });
+    if ($("#dealScroll").length > 0) {
+        $("#dealScroll").carouselTicker({
+            direction: "prev",
+        });
+    }
 
     // Feedback carouselTicker Init
-    $("#feedbackScroll").carouselTicker({
-        direction: "prev",
-    });
+    if ($("#feedbackScroll").length > 0) {
+        $("#feedbackScroll").carouselTicker({
+            direction: "prev",
+        });
+    }
 
     // Open Vip modal when about to close modal
     let moveOnce = true;
@@ -233,4 +237,44 @@
         }
     }
     switchView('#searchFlights', '#editSearch', );
+
+
+    // Switch Between Arrival And Depart On Seat Page
+    const switchArivalDepart = (arivalBtnID, departBtnID, arivalID, departID) => {
+        let arivalLink = document.querySelector(arivalBtnID),
+            departLink = document.querySelector(departBtnID),
+            arivalItem = document.querySelector(arivalID),
+            departItem = document.querySelector(departID);
+        if (arivalLink && departLink && arivalItem && departItem && window.innerWidth < 992) {
+            arivalLink.onclick = () => {
+                arivalItem.style.display = "block";
+                departItem.style.display = "none";
+            }
+            departLink.onclick = () => {
+                arivalItem.style.display = "none";
+                departItem.style.display = "block";
+            }
+        }
+    }
+    switchArivalDepart('#arivalBtn', '#departBtn', '#arivalBlock', '#departBlock');
+
+
+    // Slide Booking Footer on Mobile
+    const slideBookingFooter = (bookingFooterID) => {
+        let FooterItem = document.querySelector(bookingFooterID),
+            lastScrollTop = 0;
+        if (FooterItem && window.innerWidth < 992) {
+            window.addEventListener("scroll", function() {
+                let scrollTopPos = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTopPos > lastScrollTop) {
+                    FooterItem.classList.add('hide');
+                } else {
+                    FooterItem.classList.remove('hide');
+                }
+                lastScrollTop = scrollTopPos <= 0 ? 0 : scrollTopPos; // For Mobile or negative scrolling
+            }, false);
+        }
+    }
+    slideBookingFooter('#bookingFooter');
+
 })();
