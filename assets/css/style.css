@@ -4980,16 +4980,11 @@ footer {
   align-items: center;
   position: relative;
 }
-.booking-footer .booking-seat:hover .tooltip {
-  transform: translateY(0) scale(1);
-  opacity: 1;
-  visibility: visible;
-}
-@media (max-width: 1024px) {
+@media (min-width: 1199px) {
   .booking-footer .booking-seat:hover .tooltip {
-    visibility: hidden;
-    transform: translateY(100%) scale(0);
-    opacity: 0;
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    visibility: visible;
   }
 }
 .booking-footer .booking-seat .booking-seat-btn {

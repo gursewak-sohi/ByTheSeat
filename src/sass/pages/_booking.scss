@@ -443,13 +443,10 @@
         position: relative;
         &:hover {
             & .tooltip {
-                transform: translateY(0) scale(1);
-                opacity: 1;
-                visibility: visible;
-                @include tablet {
-                    visibility: hidden;
-                    transform: translateY(100%) scale(0);
-                    opacity: 0;
+                @include onlyLarge {
+                    transform: translateY(0) scale(1);
+                    opacity: 1;
+                    visibility: visible;
                 }
             }
         }
