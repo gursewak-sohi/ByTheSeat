@@ -791,6 +791,7 @@
             font-size: 18px;
             cursor: pointer;
             font-family: $font-nunito;
+            color: $gray-900;
             &:required:invalid {
                 color: #7C8DB0;
             }
@@ -923,6 +924,7 @@
             border-radius: 4px;
             font-size: 18px;
             cursor: pointer;
+            color: $gray-900;
             font-family: $font-nunito;
             &:required:invalid {
                 color: #7C8DB0;

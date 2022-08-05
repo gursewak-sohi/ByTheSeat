@@ -5356,6 +5356,7 @@ footer {
   font-size: 18px;
   cursor: pointer;
   font-family: "Nunito Sans", sans-serif;
+  color: #27273F;
 }
 .form-select .select-unit select:required:invalid {
   color: #7C8DB0;
@@ -5504,6 +5505,7 @@ footer {
   border-radius: 4px;
   font-size: 18px;
   cursor: pointer;
+  color: #27273F;
   font-family: "Nunito Sans", sans-serif;
 }
 .pet-select .select-unit select:required:invalid {
