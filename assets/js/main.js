@@ -87,6 +87,10 @@
             document.onclick = () => {
                 tooltipItem.classList.remove("active");
             }
+            tooltipItem.onclick = (e) => {
+                e.stopPropagation();
+                tooltipItem.classList.remove("active");
+            }
         }
     }
     tooltipShow('[data-btn="tooltip"]', '[data-block="tooltip"]');
@@ -175,7 +179,10 @@
             lightGallery(videoGallery[i], {
                 plugins: [lgVideo],
                 autoplayVideoOnSlide: true,
-                zoom: true
+                zoom: true,
+                mobileSettings: {
+                    showCloseIcon: true,
+                },
             });
         }
     }

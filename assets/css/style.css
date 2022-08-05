@@ -5104,11 +5104,6 @@ footer {
   opacity: 1;
   visibility: visible;
 }
-.tooltip:hover {
-  transform: translateY(0) scale(1);
-  opacity: 1;
-  visibility: visible;
-}
 .tooltip span {
   padding: 12px;
   color: #6C7B85;
