@@ -5461,7 +5461,7 @@ footer {
 }
 
 .pet-additional {
-  display: flex;
+  display: none;
   align-items: center;
 }
 @media (max-width: 1024px) {

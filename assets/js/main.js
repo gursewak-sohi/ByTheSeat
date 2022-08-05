@@ -288,4 +288,17 @@
     }
     slideBookingFooter('#bookingFooter');
 
+    // Show hide Pet Block
+    if ($("#petRadio").length > 0 && $("#petBlock").length) {
+        $('#petRadio input[type="radio"]').on('change', function(e) {
+            let petValue = this.value;
+            if (petValue == 'pet-yes') {
+                $('#petBlock').css('display', 'flex');
+            } else {
+                $('#petBlock').css('display', 'none');
+            }
+        });
+    }
+
+
 })();
