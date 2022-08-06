@@ -1,0 +1,71 @@
+// Thanks SCSS
+.thanks-block {
+    height: 894px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    @include tablet {
+        height: auto;
+        padding: 0 12px 24px;
+        border-bottom: 1px solid $gray-200;
+    }
+    & .icon {
+        margin-bottom: 26px;
+        margin-top: -70px;
+        @include tablet {
+            width: 86px;
+            margin-top: 44px;
+            margin-bottom: 20px;
+        }
+        & img {
+            @extend %object-cover;
+        }
+    }
+    & h2 {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 38px;
+        color: #22C55E;
+        margin-bottom: 11px;
+        @include tablet {
+            font-size: 24px;
+            line-height: 33px;
+        }
+    }
+    & h4 {
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 24px;
+        margin-bottom: 26px;
+        @include tablet {
+            font-size: 19px;
+            line-height: 24px;
+        }
+        @include mobile {
+            max-width: 250px;
+        }
+    }
+    & .thanks-text {
+        width: 100%;
+        max-width: 550px;
+        text-align: left;
+        padding: 16px 24px 16px 24px;
+        background-color: #FAFAFE;
+        border-radius: 8px;
+        @include tablet {
+            text-align: center;
+        }
+        & p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #27273F;
+            &:first-child {
+                margin-bottom: 8px;
+            }
+            @include tablet {}
+        }
+    }
+}

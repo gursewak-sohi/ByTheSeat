@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByTheSeat</title>
+    <link rel="shortcut icon" href="assets/images/svg/favicon.svg" />
+    <!-- Bundle CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="home">
+    <!-- Header  Section -->
+    <header class="inner-header">
+        <div class="container">
+            <!-- Results header -->
+            <nav class="header-nav">
+                <a class="logo" href="index.html">
+                    <img src="assets/images/logo.png" width="132" height="51" alt="icon" />
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <!-- Booking Section -->
+        <section class="booking-section">
+            <div class="container">
+                <div class="booking-block">
+                    <div class="booking-content">
+                        <div class="search-query">
+                            <div class="search-type">
+                                <div class="search-location">
+                                    <div class="search-location-unit">
+                                        <h4>SFO</h4>
+                                        <p>California, US</p>
+                                    </div>
+                                    <div class="search-location-to">
+                                        <img src="assets/images/svg/arrow-right.svg" alt="icon" />
+                                    </div>
+                                    <div class="search-location-unit">
+                                        <h4>OPE</h4>
+                                        <p>Maimi, US</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="search-units">
+                                <div id="departBlock" class="search-date">
+                                    <h5>Feb 25<span> 7:00AM</span> </h5>
+                                    <p>Departing <img id="arivalBtn" src="assets/images/svg/down.svg" alt="icon" /></p>
+                                </div>
+                                <div id="arivalBlock" class="search-date">
+                                    <h5>Mar 21<span> 12:15PM</span> </h5>
+                                    <p>Arriving <img id="departBtn" src="assets/images/svg/up.svg" alt="icon" /></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="booking-header">
+                            <div class="booking-avaition">
+                                <p>Direct Air Carrier: <b>Pegasus Elite Aviation</b> </p>
+                                <p> Public Charter Operator:<b> V-Stream Aviation</b></p>
+                            </div>
+                            <div class="booking-steps">
+                                <ul>
+                                    <li class="completed">
+                                        <a href="javascript:;">
+                                            <p>01</p>
+                                            <h5>Seats</h5>
+                                        </a>
+                                    </li>
+                                    <li class="completed">
+                                        <a href="javascript:;">
+                                            <p>02</p>
+                                            <h5>Details</h5>
+                                        </a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="javascript:;">
+                                            <p>03</p>
+                                            <h5>Confirm</h5>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="confirm-block">
+                            <div class="confirm-header">
+                                <h5>Please choose your payment method</h5>
+                                <ul class="payment-method">
+                                    <li class="active">
+                                        <img src="assets/images/booking/payment-mothod/card.svg" alt="card" />
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/booking/payment-mothod/build.svg" alt="card" />
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/booking/payment-mothod/paypal.svg" alt="card" />
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/booking/payment-mothod/bitcoin.svg" alt="card" />
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/booking/payment-mothod/affirm.svg" alt="card" />
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/booking/payment-mothod/credit.svg" alt="card" />
+                                    </li>
+                                </ul>
+                                <div class="payement-select">
+                                    <div class="select-unit">
+                                        <select name="" id="" required="">
+                                            <option value="" disabled="" selected="" hidden="">Credit Card</option>
+                                            <option value="">Credit Card</option>
+                                            <option value="">Paypal</option>
+                                            <option value="bitcoin">Bitcoin</option>
+                                            <option value="">Affirm</option>
+                                            <option value="">Credit</option>
+                                         </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="confirm-body">
+                                <h2>Credit Card</h2>
+                                <h5>Please fill in all of the following fields</h5>
+                                <div class="card-block">
+                                    <div class="card-details">
+                                        <div class="form-unit">
+                                            <input type="text" placeholder="Card Number">
+                                        </div>
+                                        <div class="form-unit">
+                                            <input type="text" placeholder="Card ID holder*">
+                                        </div>
+                                    </div>
+                                    <div class="expiry-fields">
+                                        <h4>Expiry date</h4>
+                                        <div class="select-unit">
+                                            <select name="" id="" required="">
+                                                <option value="" disabled="" selected="" hidden="">Month</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                            </select>
+                                        </div>
+                                        <div class="select-unit">
+                                            <select name="" id="" required="">
+                                                <option value="" disabled="" selected="" hidden="">Year</option>
+                                                <option value="">2023</option>
+                                                <option value="">2024</option>
+                                                <option value="">2025</option>
+                                                <option value="">2026</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-unit hint-field">
+                                            <input type="text" placeholder="CVV">
+                                            <span class="hint">
+                                                <img src="assets/images/svg/question.svg" alt="hint"/>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="billing-address">
+                                        <div class="form-unit">
+                                            <input type="text" placeholder="Billing address*">
+                                        </div>
+                                    </div>
+                                    <div class="save-card">
+                                        <div class="checkbox-unit">
+                                            <input id="saveCard" type="checkbox">
+                                            <label for="saveCard">
+                                                <span>
+                                                    <svg width="14" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M5.494 12.203c.403 0 .718-.157.937-.485l6.398-9.899c.164-.246.226-.465.226-.676 0-.54-.397-.93-.95-.93-.383 0-.616.137-.848.506l-5.79 9.174L2.5 6.133c-.226-.28-.458-.404-.793-.404-.56 0-.964.397-.964.944 0 .24.082.465.28.704l3.541 4.361c.26.322.547.465.93.465Z" fill="#fff" fill-rule="nonzero"></path></svg>
+                                                  </span>
+                                                  Save card for next time
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="thanks-field">
+                                <h5>Thank you for flying private, with By The Seat!</h5>
+                                <p>Your trust is important to us and we're committed to protecting the privacy and security of your personal information. <br> Please read these Terms carefully as they contain important information about your legal rights
+                                    and obligations. <br> By accessing or using the By The Seat (Imperium Jets) Platform and Services, you agree to comply with and be bound by these Terms.</p>
+                            </div>
+                            <div class="booking-summary">
+                                <h2>Booking summery</h2>
+                                <div class="booking-list">
+                                    <ul>
+                                        <li>
+                                            <h5>Orgin</h5>
+                                            <h4>Miami, FL (OPF)</h4>
+                                        </li>
+                                        <li>
+                                            <h5>Destination</h5>
+                                            <h4>Teterboro, NJ (TEB)</h4>
+                                        </li>
+                                        <li>
+                                            <h5>Direct Air Carrier</h5>
+                                            <h4>Pegasus Elite Aviation (PEG)</h4>
+                                        </li>
+                                        <li>
+                                            <h5>Public Charter Operator</h5>
+                                            <h4>V-Stream Aviation</h4>
+                                        </li>
+                                        <li>
+                                            <h5>Aircraft</h5>
+                                            <h4>Gulfstream G4</h4>
+                                        </li>
+                                        <li>
+                                            <h5>Passengers</h5>
+                                            <h4>1</h4>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <h5>Date</h5>
+                                            <h4>JAN 23RD 2022</h4>
+                                        </li>
+                                        <li>
+                                            <h5>Time</h5>
+                                            <h4>06:00 PM</h4>
+                                        </li>
+                                        <li>
+                                            <h5>Direction</h5>
+                                            <h4>One-Way</h4>
+                                        </li>
+                                        <li>
+                                            <h5>Distance</h5>
+                                            <h4>257 miles (478 km)</h4>
+                                        </li>
+                                        <li>
+                                            <h5>Duration</h5>
+                                            <h4>5h 0m</h4>
+                                        </li>
+                                        <li>
+                                            <h5>Payment Method</h5>
+                                            <h4>Bank transfer • Account number: 1597545</h4>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="terms-block">
+                                <div class="checkbox-unit">
+                                    <input id="terms" type="checkbox">
+                                    <label for="terms">
+                                        <span>
+                                            <svg width="14" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M5.494 12.203c.403 0 .718-.157.937-.485l6.398-9.899c.164-.246.226-.465.226-.676 0-.54-.397-.93-.95-.93-.383 0-.616.137-.848.506l-5.79 9.174L2.5 6.133c-.226-.28-.458-.404-.793-.404-.56 0-.964.397-.964.944 0 .24.082.465.28.704l3.541 4.361c.26.322.547.465.93.465Z" fill="#fff" fill-rule="nonzero"></path></svg>
+                                          </span>
+                                          <div>
+                                            I agree to the following Terms & Conditions, Cancellation Policy, and the booking summary details above: <br>
+                                          <a target="_blank" href="javascript:;">Terms</a> - <a target="_blank" href="javascript:;">Terms of flight</a> . You will also be required to fill and sign this <a target="_blank" href="javascript:;">health statement</a> , at least 48 hours prior to departure.
+                                          <p><b>Note:</b> you are advised to read our full terms, conditions and policies, using the links above. </p>
+                                          </div>                                  
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="bookingFooter" class="booking-footer">
+                            <div class="booking-flight-type">
+                                <p>Type of flight:</p>
+                                <div class="booking-seat" data-btn="tooltip">
+                                    <div class="booking-seat-btn">
+                                        <img src="assets/images/svg/check.svg" alt="icon" /> By The Seat
+                                    </div>
+                                    <div class="booking-hint">
+                                        <img src="assets/images/svg/question.svg" alt="icon">
+                                    </div>
+                                    <div data-block="tooltip" class="tooltip">
+                                        <span>This flight has been approved, you will not have to wait for it to fill up the jet.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="booking-details">
+                                <div class="unit">
+                                    <h5>Price per seat:</h5>
+                                    <h4>$4,500</h4>
+                                </div>
+                                <div class="unit">
+                                    <h5>Passengers</h5>
+                                    <h4>02</h4>
+                                </div>
+                                <div class="unit">
+                                    <h5>Total trip</h5>
+                                    <h4>$9,000</h4>
+                                </div>
+                            </div>
+                            <div class="booking-btns">
+                                <button class="btn btn-light-outline btn-md">Back</button>
+                                <button class="btn btn-primary btn-md">Confirm and Pay</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Section -->
+        <section class="support-section">
+            <div class="container">
+                <div class="support-block">
+                    <div class="support-unit">
+                        <h5>Need help?</h5>
+                        <a class="support-content" href="javascript:;">
+                            <img src="assets/images/svg/support.svg" alt="icon" />Support Center
+                        </a>
+                    </div>
+                    <div class="support-unit">
+                        <h5>Email us:</h5>
+                        <a class="support-content" href="mailto:Support@bytheseat.com">
+                            <img src="assets/images/svg/emailsvg.svg" alt="icon" />Support@bytheseat.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-inner">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-unit">
+                    <h4>DISCLAIMER</h4>
+                    <p>Imperium Jets Inc is not an Air Carrier nor an Operator. Imperium Jets does not own or operate any aircraft. Operational control of all charter flights is provided by FAR Part 135 or 121 air carriers or the foreign equivalent. All
+                        services are subject to the terms and conditions.</p>
+                </div>
+
+                <div class="footer-content">
+                    <div class="powered-by">
+                        <h4>Powered by</h4>
+                        <a class="logo" href="index.html">
+                            <img src="assets/images/svg/logo-blue.svg" alt="logo" />
+                        </a>
+                    </div>
+                    <div class="footer-payments">
+                        <h5>Payments methods</h5>
+                        <ul>
+                            <li><img src="assets/images/home/cards/master.svg" alt="master"></li>
+                            <li><img src="assets/images/home/cards/visa.svg" alt="visa"></li>
+                            <li><img src="assets/images/home/cards/amex.svg" alt="amex"></li>
+                            <li><img src="assets/images/home/cards/paypal.svg" alt="paypal"></li>
+                            <li><img src="assets/images/home/cards/bitcoin.svg" alt="bitcoin"></li>
+                            <li><img src="assets/images/home/cards/discover.svg" alt="discover"></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="footer-companies">
+                    <li><img src="assets/images/home/companies/bbb.svg" width="116" height="43" alt="bbb"></li>
+                    <li><img src="assets/images/home/companies/nbaa.png" width="129" height="30" alt="nbaa"></li>
+                    <li><img src="assets/images/home/companies/dot.png" width="194" height="57" alt="dot"></li>
+                    <li><img src="assets/images/home/companies/excellece.svg" width="127" height="34" alt="review"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="footer-bottom">
+                    <ul>
+                        <li><a href="javascript:;">Terms of Service</a></li>
+                        <li><a href="javascript:;">Terms of Flight</a></li>
+                        <li><a href="javascript:;">Privacy</a></li>
+                        <li><a href="javascript:;">Cookies</a></li>
+                        <li><a href="javascript:;">Covid-19 Guidelines</a></li>
+                    </ul>
+                    <div class="external-links">
+                        <p>© 2022 Imperiun jets. All rights reserved.</p>
+                        <div>
+                            <a href="https://tcrcinfo.org/" target="_blank">TCRC</a> ID: #708461 / <a href="https://oag.ca.gov/travel" target="_blank">Seller of Travel</a> ID: #2146363-40
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+<!-- JQuery  -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<!-- Light Box JS -->
+<script type="text/javascript" src="assets/js/lightgallery.min.js"></script>
+<!-- Light Box Plugin JS -->
+<script type="text/javascript" src="assets/js/video.js"></script>
+<script type="text/javascript" src="assets/js/lg-zoom.min.js"></script>
+<script type="text/javascript" src="assets/js/lg-thumbnail.min.js"></script>
+<!-- Custom JS -->
+<script type="text/javascript" src="assets/js/main.js"></script>
+
+</html>

@@ -289,13 +289,15 @@
     slideBookingFooter('#bookingFooter');
 
     // Show hide Pet Block
-    if ($("#petRadio").length > 0 && $("#petBlock").length) {
+    if ($("#petRadio").length > 0 && $("#petBlock").length > 0 && $("#petNote").length > 0) {
         $('#petRadio input[type="radio"]').on('change', function(e) {
             let petValue = this.value;
             if (petValue == 'pet-yes') {
                 $('#petBlock').css('display', 'flex');
+                $('#petNote').css('display', 'flex');
             } else {
                 $('#petBlock').css('display', 'none');
+                $('#petNote').css('display', 'none');
             }
         });
     }

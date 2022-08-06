@@ -12,8 +12,14 @@
 }
 
 // Media
-@mixin onlyLarge {
+@mixin only-large {
     @media (min-width: $laptop-width) {
+        @content;
+    }
+}
+
+@mixin mini-mobile {
+    @media (max-width: $mini-mobile-width) {
         @content;
     }
 }
