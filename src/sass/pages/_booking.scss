@@ -979,7 +979,8 @@
     }
     & .payement-select {
         display: none;
-        margin-bottom: 24px;
+        margin-bottom: 72px;
+        position: relative;
         @include tablet {
             display: block;
         }

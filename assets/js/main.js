@@ -303,4 +303,16 @@
     }
 
 
+    $('#app-cover #options input[type="radio"]').on('change', function(e) {
+        $('#options-view-button').prop('checked', false);
+    });
+
+    $(document).on('click', function(e) {
+        $('#options-view-button').prop('checked', false);
+    });
+
+    $('#options-view-button').on('click', function(e) {
+        e.stopPropagation();
+    });
+
 })();

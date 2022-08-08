@@ -111,7 +111,7 @@
                                     </li>
                                 </ul>
                                 <div class="payement-select">
-                                    <div class="select-unit">
+                                    <!-- <div class="select-unit">
                                         <select name="" id="" required="">
                                             <option value="" disabled="" selected="" hidden="">Credit Card</option>
                                             <option value="">Credit Card</option>
@@ -120,7 +120,66 @@
                                             <option value="">Affirm</option>
                                             <option value="">Credit</option>
                                          </select>
-                                    </div>
+                                    </div> -->
+
+                                    <form id="app-cover">
+                                        <div id="select-box">
+                                            <input type="checkbox" id="options-view-button">
+                                            <div id="select-button" class="brd">
+                                                <div id="selected-value">
+                                                    <span>Select a platform</span>
+                                                </div>
+                                                <div id="chevrons">
+                                                    <img src="assets/images/svg/select.svg" alt="icon" />
+                                                </div>
+                                            </div>
+                                            <div id="options">
+                                                <div class="option">
+                                                    <input class="s-c top" type="radio" name="platform" value="Credit Card">
+                                                    <input class="s-c bottom" type="radio" name="platform" value="Credit Card">
+                                                    <img src="assets/images/booking/payment-mothod/card.svg" width="20" alt="card" />
+                                                    <span class="label">Credit Card</span>
+                                                    <span class="opt-val">Credit Card</span>
+                                                </div>
+                                                <div class="option">
+                                                    <input class="s-c top" type="radio" name="platform" value="Card">
+                                                    <input class="s-c bottom" type="radio" name="platform" value="Card">
+                                                    <img src="assets/images/booking/payment-mothod/build.svg" width="17" alt="card" />
+                                                    <span class="label">Card</span>
+                                                    <span class="opt-val">Card</span>
+                                                </div>
+                                                <div class="option">
+                                                    <input class="s-c top" type="radio" name="platform" value="Paypal">
+                                                    <input class="s-c bottom" type="radio" name="platform" value="Paypal">
+                                                    <img src="assets/images/booking/payment-mothod/paypal.svg" width="15" alt="card" />
+                                                    <span class="label">Paypal</span>
+                                                    <span class="opt-val">Paypal</span>
+                                                </div>
+                                                <div class="option">
+                                                    <input class="s-c top" type="radio" name="platform" value="Bitcoin">
+                                                    <input class="s-c bottom" type="radio" name="platform" value="Bitcoin">
+                                                    <img src="assets/images/booking/payment-mothod/bitcoin.svg" width="18" alt="card" />
+                                                    <span class="label">Bitcoin</span>
+                                                    <span class="opt-val">Bitcoin</span>
+                                                </div>
+                                                <div class="option">
+                                                    <input class="s-c top" type="radio" name="platform" value="Affirm">
+                                                    <input class="s-c bottom" type="radio" name="platform" value="Affirm">
+                                                    <img src="assets/images/booking/payment-mothod/affirm.svg" width="28" alt="card" />
+                                                    <span class="label">Affirm</span>
+                                                    <span class="opt-val">Affirm</span>
+                                                </div>
+                                                <div class="option">
+                                                    <input class="s-c top" type="radio" name="platform" value="Credit">
+                                                    <input class="s-c bottom" type="radio" name="platform" value="Credit">
+                                                    <img src="assets/images/booking/payment-mothod/credit.svg" width="32" alt="card" />
+                                                    <span class="label">Credit</span>
+                                                    <span class="opt-val">Credit</span>
+                                                </div>
+                                                <div id="option-bg"></div>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                             <div class="confirm-body">
