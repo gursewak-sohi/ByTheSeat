@@ -123,6 +123,9 @@
         padding: 28px 12px 12px;
         flex-direction: column-reverse;
     }
+    &.shared-header {
+        justify-content: center;
+    }
     & .booking-avaition {
         @include tablet {
             margin-top: 28px;
@@ -208,6 +211,12 @@
         padding: 12px 0 24px;
         border-bottom: 1px solid $gray-200;
         flex-direction: column-reverse;
+    }
+    &.shared-body {
+        padding: 41px 25px 31px;
+        @include tablet {
+            padding: 12px 0 24px;
+        }
     }
 }
 
@@ -307,7 +316,10 @@
     flex-direction: column;
     max-width: 445px;
     width: 100%;
-    & h4 {
+    @include tablet {
+        max-width: 100%;
+    }
+    &>h4 {
         display: flex;
         color: #111827;
         font-size: 16px;
@@ -478,10 +490,12 @@
         align-items: center;
         padding: 0 24px 0 5px;
         margin-left: auto;
+        margin-right: 16px;
         @include tablet {
             padding: 0;
             width: 100%;
-            margin-bottom: 12px;
+            margin-bottom: 0;
+            margin-right: 0;
         }
         & .unit {
             padding: 8px;
@@ -511,13 +525,14 @@
         }
     }
     & .booking-btns {
-        margin-left: 16px;
+        margin-left: auto;
         display: flex;
         justify-content: flex-end;
         width: 249px;
         @include tablet {
-            margin: 0;
+            margin-left: 0;
             width: 100%;
+            margin-top: 12px;
         }
         & .btn {
             flex-grow: 1;
@@ -1171,6 +1186,78 @@
                     display: none;
                 }
             }
+        }
+    }
+}
+
+.flight-details {
+    margin-bottom: 52px;
+    @include tablet {
+        padding: 0 12px;
+        margin-bottom: 40px;
+    }
+    & ul {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        row-gap: 3px;
+        & li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4px;
+            border-radius: 8px;
+            &:nth-child(2n) {
+                background-color: #FAFAFE;
+            }
+            & h5 {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: #6D6D6D;
+            }
+            & h4 {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: #111827;
+                text-align: right;
+            }
+            & h2 {
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 25px;
+                color: #111827;
+                text-align: right;
+            }
+        }
+    }
+}
+
+.departure-block {
+    @include tablet {
+        padding: 0 12px;
+    }
+    & .departure-time {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & h4 {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 25px;
+            color: #6E7491;
+        }
+    }
+    & p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #6D6D6D;
+        text-align: right;
+        @include tablet {
+            font-size: 14px;
         }
     }
 }

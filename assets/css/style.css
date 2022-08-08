@@ -2653,7 +2653,7 @@ header {
   background-position: right 12px center;
   width: 100%;
   border: 1px solid #A1B0CC;
-  padding: 12px 24px 12px 6px;
+  padding: 11px 24px 12px 6px;
   height: 48px;
   border-radius: 4px;
   font-size: 18px;
@@ -5056,6 +5056,9 @@ footer {
     flex-direction: column-reverse;
   }
 }
+.booking-header.shared-header {
+  justify-content: center;
+}
 @media (max-width: 1024px) {
   .booking-header .booking-avaition {
     margin-top: 28px;
@@ -5130,6 +5133,14 @@ footer {
     padding: 12px 0 24px;
     border-bottom: 1px solid #E5E7EB;
     flex-direction: column-reverse;
+  }
+}
+.booking-body.shared-body {
+  padding: 41px 25px 31px;
+}
+@media (max-width: 1024px) {
+  .booking-body.shared-body {
+    padding: 12px 0 24px;
   }
 }
 
@@ -5236,7 +5247,12 @@ footer {
   max-width: 445px;
   width: 100%;
 }
-.booking-seats h4 {
+@media (max-width: 1024px) {
+  .booking-seats {
+    max-width: 100%;
+  }
+}
+.booking-seats > h4 {
   display: flex;
   color: #111827;
   font-size: 16px;
@@ -5246,11 +5262,11 @@ footer {
   font-weight: 400;
 }
 @media (max-width: 1024px) {
-  .booking-seats h4 {
+  .booking-seats > h4 {
     padding: 0 12px;
   }
 }
-.booking-seats h4 b {
+.booking-seats > h4 b {
   margin-left: 3px;
 }
 .booking-seats .seats-allocation {
@@ -5420,12 +5436,14 @@ footer {
   align-items: center;
   padding: 0 24px 0 5px;
   margin-left: auto;
+  margin-right: 16px;
 }
 @media (max-width: 1024px) {
   .booking-footer .booking-details {
     padding: 0;
     width: 100%;
-    margin-bottom: 12px;
+    margin-bottom: 0;
+    margin-right: 0;
   }
 }
 .booking-footer .booking-details .unit {
@@ -5457,15 +5475,16 @@ footer {
   font-weight: 700;
 }
 .booking-footer .booking-btns {
-  margin-left: 16px;
+  margin-left: auto;
   display: flex;
   justify-content: flex-end;
   width: 249px;
 }
 @media (max-width: 1024px) {
   .booking-footer .booking-btns {
-    margin: 0;
+    margin-left: 0;
     width: 100%;
+    margin-top: 12px;
   }
 }
 .booking-footer .booking-btns .btn {
@@ -6183,6 +6202,82 @@ footer {
 @media (max-width: 1024px) {
   .terms-block .checkbox-unit label br {
     display: none;
+  }
+}
+
+.flight-details {
+  margin-bottom: 52px;
+}
+@media (max-width: 1024px) {
+  .flight-details {
+    padding: 0 12px;
+    margin-bottom: 40px;
+  }
+}
+.flight-details ul {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+}
+.flight-details ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px;
+  border-radius: 8px;
+}
+.flight-details ul li:nth-child(2n) {
+  background-color: #FAFAFE;
+}
+.flight-details ul li h5 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #6D6D6D;
+}
+.flight-details ul li h4 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #111827;
+  text-align: right;
+}
+.flight-details ul li h2 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #111827;
+  text-align: right;
+}
+
+@media (max-width: 1024px) {
+  .departure-block {
+    padding: 0 12px;
+  }
+}
+.departure-block .departure-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.departure-block .departure-time h4 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: #6E7491;
+}
+.departure-block p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #6D6D6D;
+  text-align: right;
+}
+@media (max-width: 1024px) {
+  .departure-block p {
+    font-size: 14px;
   }
 }
 
