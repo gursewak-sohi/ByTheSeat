@@ -4944,6 +4944,9 @@ footer {
     margin-bottom: 0;
   }
 }
+.booking-block.thanks-page {
+  display: flex;
+}
 .booking-block .booking-content {
   display: flex;
   flex-direction: column;
@@ -6286,7 +6289,7 @@ footer {
 
 .thanks-block {
   height: 894px;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;

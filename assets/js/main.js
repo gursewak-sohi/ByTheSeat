@@ -363,11 +363,7 @@
             $('#bookingBtns').append(`<button data-btn="back-to-seats" class="btn btn-light-outline btn-md">Back</button><button data-btn="confirm" class="btn btn-primary btn-md">Next</button>`);
         });
         $(document).on('click', '[data-btn="thanks"]', function(e) {
-            $('html, body').animate({ scrollTop: 0 }, 0);
-            $('#confirmBlock').hide();
-            $('#bookingHeader').hide();
-            $('#bookingFooter').hide();
-            $('#thanksBlock').css('display', 'flex');
+            window.location.href = "thank-you.html";
         });
     }
 })();

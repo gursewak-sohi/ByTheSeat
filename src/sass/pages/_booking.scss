@@ -42,6 +42,9 @@
         padding-bottom: 0;
         margin-bottom: 0;
     }
+    &.thanks-page {
+        display: flex;
+    }
     & .booking-content {
         display: flex;
         flex-direction: column;
