@@ -1,35 +1,4 @@
 // Loading SCSS
-.loading-section {
-    padding: 120px 0 0;
-    position: relative;
-    z-index: 0;
-    @include tablet {
-        padding: 56px 0 48px;
-    }
-    &::before {
-        content: "";
-        position: absolute;
-        background-image: url(../../assets/images/search/bg.png);
-        z-index: -1;
-        width: 100%;
-        height: 477px;
-        background-size: 1920px 577px;
-        top: 0;
-        left: 0;
-        background-position: center;
-        @include tablet {
-            height: 56px;
-            background-size: cover;
-        }
-    }
-    & .container {
-        @include tablet {
-            padding-left: 0;
-            padding-right: 0;
-        }
-    }
-}
-
 .loading-block {
     display: flex;
     flex-direction: column;

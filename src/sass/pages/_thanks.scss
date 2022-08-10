@@ -1,11 +1,12 @@
 // Thanks SCSS
 .thanks-block {
     height: 894px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    animation: moveUpLess 300ms ease;
     @include tablet {
         height: auto;
         padding: 0 12px 24px;

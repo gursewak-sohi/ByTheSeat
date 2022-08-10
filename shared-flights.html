@@ -29,7 +29,16 @@
         <!-- Booking Section -->
         <section class="booking-section">
             <div class="container">
-                <div class="booking-block">
+                <!-- Loading Block -->
+                <div id="loading" class="loading-block">
+                    <div class="loading-content">
+                        <h1>Welcome aboard!</h1>
+                        <p>Redircting to your requested flight... please hold on</p>
+                        <lottie-player class="lottie-player" src="assets/lottie/loading-plane.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                    </div>
+                </div>
+                <!-- Booking Block -->
+                <div id="bookingBlock" class="booking-block">
                     <div class="booking-content">
                         <div class="search-query">
                             <div class="search-type">
@@ -59,8 +68,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="booking-header shared-header">
-                            <div class="booking-steps">
+                        <!-- Booking Steps Header -->
+                        <div id="bookingHeader" class="booking-header shared-header">
+                            <div id="bookingSteps" class="booking-steps">
                                 <ul>
                                     <li class="active">
                                         <a href="javascript:;">
@@ -83,7 +93,8 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="booking-body shared-body">
+                        <!-- Shared Block -->
+                        <div id="seatsBlock" class="booking-body">
                             <div class="booking-seats">
                                 <h4>
                                     <img src="assets/images/svg/aircraft.svg" alt="icon" /> Flight details
@@ -153,6 +164,469 @@
 
                             </div>
                         </div>
+                        <!-- Details Block -->
+                        <div id="detailsBlock" class="details-block">
+                            <div class="passenger-block">
+                                <div class="passenger-header">
+                                    <div class="passenger-info">
+                                        <img src="assets/images/svg/info.svg" alt="icon" /> Please fill in all of the following fields
+                                    </div>
+
+                                </div>
+                                <div class="passenger-body">
+                                    <div class="passenger-seat-head">
+                                        <div class="passenger-seat">
+                                            <img src="assets/images/svg/passenger.svg" alt="icon" />Passenger 1 (Seat 1A)
+                                        </div>
+                                        <div class="passenger-skip">
+                                            <div class="checkbox-unit">
+                                                <input id="skip-1" type="checkbox">
+                                                <label for="skip-1">
+                                                    <span>
+                                                        <svg width="14" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M5.494 12.203c.403 0 .718-.157.937-.485l6.398-9.899c.164-.246.226-.465.226-.676 0-.54-.397-.93-.95-.93-.383 0-.616.137-.848.506l-5.79 9.174L2.5 6.133c-.226-.28-.458-.404-.793-.404-.56 0-.964.397-.964.944 0 .24.082.465.28.704l3.541 4.361c.26.322.547.465.93.465Z" fill="#fff" fill-rule="nonzero"></path></svg>
+                                                      </span>
+                                                      Skip this passanger details 
+                                                </label>
+                                            </div>
+                                            <button class="details">
+                                                <img src="assets/images/svg/question.svg" alt="icon"/>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="passenger-fields">
+                                        <div class="form-unit">
+                                            <input type="text" placeholder="First name*">
+                                        </div>
+                                        <div class="form-unit">
+                                            <input type="text" placeholder="Last name*">
+                                        </div>
+                                        <div class="form-unit">
+                                            <input type="text" placeholder="Email*">
+                                        </div>
+                                        <div class="form-unit">
+                                            <input type="text" placeholder="Phone number*">
+                                        </div>
+                                        <div class="form-radio">
+                                            <h5>*Gender</h5>
+                                            <div class="radio-unit">
+                                                <input id="male-1" type="radio" name="gender-1" checked="">
+                                                <label for="male-1">
+                                                    <span></span>Male
+                                                </label>
+                                            </div>
+                                            <div class="radio-unit">
+                                                <input id="female-1" type="radio" name="gender-1">
+                                                <label for="female-1">
+                                                    <span></span>Female
+                                                </label>
+                                            </div>
+                                            <div class="radio-unit">
+                                                <input id="other-1" type="radio" name="gender-1">
+                                                <label for="other-1">
+                                                    <span></span>Other
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-select">
+                                            <h5>Date of birth</h5>
+                                            <div class="select-unit">
+                                                <select name="" id="" required="">
+                                                    <option value="" disabled="" selected="" hidden="">Day</option>
+                                                    <option value="">01</option>
+                                                    <option value="">02</option>
+                                                    <option value="">03</option>
+                                                    <option value="">04</option>
+                                                </select>
+                                            </div>
+                                            <div class="select-unit">
+                                                <select name="" id="" required="">
+                                                    <option value="" disabled="" selected="" hidden="">Month</option>
+                                                    <option value="">01</option>
+                                                    <option value="">02</option>
+                                                    <option value="">03</option>
+                                                    <option value="">04</option>
+                                                </select>
+                                            </div>
+                                            <div class="select-unit">
+                                                <select name="" id="" required="">
+                                                    <option value="" disabled="" selected="" hidden="">Year</option>
+                                                    <option value="">1990</option>
+                                                    <option value="">1991</option>
+                                                    <option value="">1992</option>
+                                                    <option value="">1993</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="passenger-body">
+                                    <div class="passenger-seat-head">
+                                        <div class="passenger-seat">
+                                            <img src="assets/images/svg/passenger.svg" alt="icon" />Passenger 2 (Seat 2A)
+                                        </div>
+                                        <div class="passenger-skip">
+                                            <div class="checkbox-unit">
+                                                <input id="skip-2" type="checkbox">
+                                                <label for="skip-2">
+                                                    <span>
+                                                        <svg width="14" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M5.494 12.203c.403 0 .718-.157.937-.485l6.398-9.899c.164-.246.226-.465.226-.676 0-.54-.397-.93-.95-.93-.383 0-.616.137-.848.506l-5.79 9.174L2.5 6.133c-.226-.28-.458-.404-.793-.404-.56 0-.964.397-.964.944 0 .24.082.465.28.704l3.541 4.361c.26.322.547.465.93.465Z" fill="#fff" fill-rule="nonzero"></path></svg>
+                                                      </span>
+                                                      Skip this passanger details 
+                                                </label>
+                                            </div>
+                                            <button class="details">
+                                                <img src="assets/images/svg/question.svg" alt="icon"/>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="passenger-fields">
+                                        <div class="form-unit">
+                                            <input type="text" placeholder="First name*">
+                                        </div>
+                                        <div class="form-unit">
+                                            <input type="text" placeholder="Last name*">
+                                        </div>
+                                        <div class="form-unit">
+                                            <input type="text" placeholder="Email*">
+                                        </div>
+                                        <div class="form-unit">
+                                            <input type="text" placeholder="Phone number*">
+                                        </div>
+                                        <div class="form-radio">
+                                            <h5>Gender</h5>
+                                            <div class="radio-unit">
+                                                <input id="male-2" type="radio" name="gender-2" checked="">
+                                                <label for="male-2">
+                                                    <span></span>Male
+                                                </label>
+                                            </div>
+                                            <div class="radio-unit">
+                                                <input id="female-2" type="radio" name="gender-2">
+                                                <label for="female-2">
+                                                    <span></span>Female
+                                                </label>
+                                            </div>
+                                            <div class="radio-unit">
+                                                <input id="other-2" type="radio" name="gender-2">
+                                                <label for="other-2">
+                                                    <span></span>Other
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-select">
+                                            <h5>Date of birth</h5>
+                                            <div class="select-unit">
+                                                <select name="" id="" required="">
+                                                    <option value="" disabled="" selected="" hidden="">Day</option>
+                                                    <option value="">01</option>
+                                                    <option value="">02</option>
+                                                    <option value="">03</option>
+                                                    <option value="">04</option>
+                                                </select>
+                                            </div>
+                                            <div class="select-unit">
+                                                <select name="" id="" required="">
+                                                    <option value="" disabled="" selected="" hidden="">Month</option>
+                                                    <option value="">01</option>
+                                                    <option value="">02</option>
+                                                    <option value="">03</option>
+                                                    <option value="">04</option>
+                                                </select>
+                                            </div>
+                                            <div class="select-unit">
+                                                <select name="" id="" required="">
+                                                    <option value="" disabled="" selected="" hidden="">Year</option>
+                                                    <option value="">1990</option>
+                                                    <option value="">1991</option>
+                                                    <option value="">1992</option>
+                                                    <option value="">1993</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pet-block">
+                                    <div class="pet-heading">
+                                        <img src="assets/images/svg/paws.svg" alt="icon" /> Pet-friendly flight
+                                    </div>
+                                    <div class="pet-body">
+                                        <div id="petRadio" class="pet-radio">
+                                            <h5>Are you bringing your pet on board?</h5>
+                                            <div class="radio-unit">
+                                                <input id="petNo" type="radio" value="pet-no" name="pet" checked="">
+                                                <label for="petNo">
+                                                    <span></span>No
+                                                </label>
+                                            </div>
+                                            <div class="radio-unit">
+                                                <input id="petYes" type="radio" value="pet-yes" name="pet">
+                                                <label for="petYes">
+                                                    <span></span>Yes
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div id="petBlock" class="pet-additional">
+                                            <div class="pet-select">
+                                                <h5>How many pets?</h5>
+                                                <div class="select-unit">
+                                                    <select name="" id="" required="">
+                                                        <option value="" disabled="" selected="" hidden="">1</option>
+                                                        <option value="">1</option>
+                                                        <option value="">2</option>
+                                                        <option value="">3</option>
+                                                        <option value="">4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="pet-extra">
+                                                <h5>Extry pay:</h5>
+                                                <h4>$500</h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div id="petNote" class="pet-footer">
+                                        <h4>*Please note!</h4>
+                                        <p>All pets must be carrierd in their cage/crate/carry or on their leash. </p>
+                                        <p> You are responsible for the pet’s safety, health and well-being on board the flight.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Confirm Block -->
+                        <div id="confirmBlock" class="confirm-block">
+                            <div class="confirm-header">
+                                <h5>Please choose your payment method</h5>
+                                <ul class="payment-method">
+                                    <li class="active">
+                                        <img src="assets/images/booking/payment-mothod/card.svg" alt="card" />
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/booking/payment-mothod/build.svg" alt="card" />
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/booking/payment-mothod/paypal.svg" alt="card" />
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/booking/payment-mothod/bitcoin.svg" alt="card" />
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/booking/payment-mothod/affirm.svg" alt="card" />
+                                    </li>
+                                    <li>
+                                        <img src="assets/images/booking/payment-mothod/credit.svg" alt="card" />
+                                    </li>
+                                </ul>
+                                <div class="payement-select">
+
+                                    <form id="app-cover">
+                                        <div id="select-box">
+                                            <input type="checkbox" id="options-view-button">
+                                            <div id="select-button" class="brd">
+                                                <div id="selected-value">
+                                                    <span>Select a platform</span>
+                                                </div>
+                                                <div id="chevrons">
+                                                    <img src="assets/images/svg/select.svg" alt="icon" />
+                                                </div>
+                                            </div>
+                                            <div id="options">
+                                                <div class="option">
+                                                    <input class="s-c top" type="radio" name="platform" value="Credit Card">
+                                                    <input class="s-c bottom" type="radio" name="platform" value="Credit Card">
+                                                    <img src="assets/images/booking/payment-mothod/card.svg" width="20" alt="card" />
+                                                    <span class="label">Credit Card</span>
+                                                    <span class="opt-val"><img src="assets/images/booking/payment-mothod/card.svg" width="20" alt="card" /> Credit Card</span>
+                                                </div>
+                                                <div class="option">
+                                                    <input class="s-c top" type="radio" name="platform" value="Card">
+                                                    <input class="s-c bottom" type="radio" name="platform" value="Card">
+                                                    <img src="assets/images/booking/payment-mothod/build.svg" width="17" alt="card" />
+                                                    <span class="label">Card</span>
+                                                    <span class="opt-val"><img src="assets/images/booking/payment-mothod/build.svg" width="17" alt="card" /> Card</span>
+                                                </div>
+                                                <div class="option">
+                                                    <input class="s-c top" type="radio" name="platform" value="Paypal">
+                                                    <input class="s-c bottom" type="radio" name="platform" value="Paypal">
+                                                    <img src="assets/images/booking/payment-mothod/paypal.svg" width="15" alt="card" />
+                                                    <span class="label">Paypal</span>
+                                                    <span class="opt-val"><img src="assets/images/booking/payment-mothod/paypal.svg" width="15" alt="card" /> Paypal</span>
+                                                </div>
+                                                <div class="option">
+                                                    <input class="s-c top" type="radio" name="platform" value="Bitcoin">
+                                                    <input class="s-c bottom" type="radio" name="platform" value="Bitcoin">
+                                                    <img src="assets/images/booking/payment-mothod/bitcoin.svg" width="18" alt="card" />
+                                                    <span class="label">Bitcoin</span>
+                                                    <span class="opt-val"><img src="assets/images/booking/payment-mothod/bitcoin.svg" width="18" alt="card" /> Bitcoin</span>
+                                                </div>
+                                                <div class="option">
+                                                    <input class="s-c top" type="radio" name="platform" value="Affirm">
+                                                    <input class="s-c bottom" type="radio" name="platform" value="Affirm">
+                                                    <img src="assets/images/booking/payment-mothod/affirm.svg" width="32" alt="card" />
+                                                    <span class="label">Affirm</span>
+                                                    <span class="opt-val"><img src="assets/images/booking/payment-mothod/affirm.svg" width="32" alt="card" /> Affirm</span>
+                                                </div>
+                                                <div class="option">
+                                                    <input class="s-c top" type="radio" name="platform" value="Credit">
+                                                    <input class="s-c bottom" type="radio" name="platform" value="Credit">
+                                                    <img src="assets/images/booking/payment-mothod/credit.svg" width="40" alt="card" />
+                                                    <span class="label">Credit</span>
+                                                    <span class="opt-val"><img src="assets/images/booking/payment-mothod/credit.svg" width="40" alt="card" /> Credit</span>
+                                                </div>
+                                                <div id="option-bg"></div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="confirm-body">
+                                <h2>Credit Card</h2>
+                                <h5>Please fill in all of the following fields</h5>
+                                <div class="card-block">
+                                    <div class="card-details">
+                                        <div class="form-unit">
+                                            <input type="text" placeholder="Card Number">
+                                        </div>
+                                        <div class="form-unit">
+                                            <input type="text" placeholder="Card ID holder*">
+                                        </div>
+                                    </div>
+                                    <div class="expiry-fields">
+                                        <h4>Expiry date</h4>
+                                        <div class="select-unit">
+                                            <select name="" id="" required="">
+                                                <option value="" disabled="" selected="" hidden="">Month</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                            </select>
+                                        </div>
+                                        <div class="select-unit">
+                                            <select name="" id="" required="">
+                                                <option value="" disabled="" selected="" hidden="">Year</option>
+                                                <option value="">2023</option>
+                                                <option value="">2024</option>
+                                                <option value="">2025</option>
+                                                <option value="">2026</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-unit hint-field">
+                                            <input type="text" placeholder="CVV">
+                                            <span class="hint">
+                                                <img src="assets/images/svg/question.svg" alt="hint"/>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="billing-address">
+                                        <div class="form-unit">
+                                            <input type="text" placeholder="Billing address*">
+                                        </div>
+                                    </div>
+                                    <div class="save-card">
+                                        <div class="checkbox-unit">
+                                            <input id="saveCard" type="checkbox">
+                                            <label for="saveCard">
+                                                <span>
+                                                    <svg width="14" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M5.494 12.203c.403 0 .718-.157.937-.485l6.398-9.899c.164-.246.226-.465.226-.676 0-.54-.397-.93-.95-.93-.383 0-.616.137-.848.506l-5.79 9.174L2.5 6.133c-.226-.28-.458-.404-.793-.404-.56 0-.964.397-.964.944 0 .24.082.465.28.704l3.541 4.361c.26.322.547.465.93.465Z" fill="#fff" fill-rule="nonzero"></path></svg>
+                                                  </span>
+                                                  Save card for next time
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="thanks-field">
+                                <h5>Thank you for flying private, with By The Seat!</h5>
+                                <p>Your trust is important to us and we're committed to protecting the privacy and security of your personal information. <br> Please read these Terms carefully as they contain important information about your legal rights
+                                    and obligations. <br> By accessing or using the By The Seat (Imperium Jets) Platform and Services, you agree to comply with and be bound by these Terms.</p>
+                            </div>
+                            <div class="booking-summary">
+                                <h2>Booking summery</h2>
+                                <div class="booking-list">
+                                    <ul>
+                                        <li>
+                                            <h5>Orgin</h5>
+                                            <h4>Miami, FL (OPF)</h4>
+                                        </li>
+                                        <li>
+                                            <h5>Destination</h5>
+                                            <h4>Teterboro, NJ (TEB)</h4>
+                                        </li>
+                                        <li>
+                                            <h5>Direct Air Carrier</h5>
+                                            <h4>Pegasus Elite Aviation (PEG)</h4>
+                                        </li>
+                                        <li>
+                                            <h5>Public Charter Operator</h5>
+                                            <h4>V-Stream Aviation</h4>
+                                        </li>
+                                        <li>
+                                            <h5>Aircraft</h5>
+                                            <h4>Gulfstream G4</h4>
+                                        </li>
+                                        <li>
+                                            <h5>Passengers</h5>
+                                            <h4>1</h4>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <h5>Date</h5>
+                                            <h4>JAN 23RD 2022</h4>
+                                        </li>
+                                        <li>
+                                            <h5>Time</h5>
+                                            <h4>06:00 PM</h4>
+                                        </li>
+                                        <li>
+                                            <h5>Direction</h5>
+                                            <h4>One-Way</h4>
+                                        </li>
+                                        <li>
+                                            <h5>Distance</h5>
+                                            <h4>257 miles (478 km)</h4>
+                                        </li>
+                                        <li>
+                                            <h5>Duration</h5>
+                                            <h4>5h 0m</h4>
+                                        </li>
+                                        <li>
+                                            <h5>Payment Method</h5>
+                                            <h4>Bank transfer • Account number: 1597545</h4>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="terms-block">
+                                <div class="checkbox-unit">
+                                    <input id="terms" type="checkbox">
+                                    <label for="terms">
+                                        <span>
+                                            <svg width="14" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M5.494 12.203c.403 0 .718-.157.937-.485l6.398-9.899c.164-.246.226-.465.226-.676 0-.54-.397-.93-.95-.93-.383 0-.616.137-.848.506l-5.79 9.174L2.5 6.133c-.226-.28-.458-.404-.793-.404-.56 0-.964.397-.964.944 0 .24.082.465.28.704l3.541 4.361c.26.322.547.465.93.465Z" fill="#fff" fill-rule="nonzero"></path></svg>
+                                          </span>
+                                          <div>
+                                            I agree to the following Terms & Conditions, Cancellation Policy, and the booking summary details above: <br>
+                                          <a target="_blank" href="javascript:;">Terms</a> - <a target="_blank" href="javascript:;">Terms of flight</a> . You will also be required to fill and sign this <a target="_blank" href="javascript:;">health statement</a> , at least 48 hours prior to departure.
+                                          <p><b>Note:</b> you are advised to read our full terms, conditions and policies, using the links above. </p>
+                                          </div>                                  
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Thanks Block -->
+                        <div id="thanksBlock" class="thanks-block">
+                            <div class="icon">
+                                <img src="assets/images/svg/done.svg" alt="icon" />
+                            </div>
+                            <h2>Bon voyage, Lidor Revah!</h2>
+                            <h4>Thank you for flying private, with By The Seat.</h4>
+                            <div class="thanks-text">
+                                <p>Your confirmation number is <b>#381029404387</b></p>
+                                <p>We’ve sent a copy of your booking confirmation to your email address.</p>
+                            </div>
+                        </div>
+                        <!-- Booking Footer -->
                         <div id="bookingFooter" class="booking-footer">
                             <div class="shared-flights-footer">
                                 <div class="booking-flight-type">
@@ -176,8 +650,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="booking-btns">
-                                <button class="btn btn-primary btn-md">Next</button>
+                            <div id="bookingBtns" class="booking-btns">
+                                <button data-btn="details" class="btn btn-primary btn-md">Next</button>
                             </div>
                         </div>
                     </div>
@@ -274,6 +748,8 @@
 <script type="text/javascript" src="assets/js/video.js"></script>
 <script type="text/javascript" src="assets/js/lg-zoom.min.js"></script>
 <script type="text/javascript" src="assets/js/lg-thumbnail.min.js"></script>
+<!-- Lottie Player -->
+<script type="text/javascript" src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <!-- Custom JS -->
 <script type="text/javascript" src="assets/js/main.js"></script>
 

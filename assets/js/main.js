@@ -302,17 +302,72 @@
         });
     }
 
+    // Hide Custom Select
+    if ($("#app-cover").length > 0) {
+        $('#app-cover #options input[type="radio"]').on('change', function(e) {
+            $('#options-view-button').prop('checked', false);
+        });
+        $(document).on('click', function(e) {
+            $('#options-view-button').prop('checked', false);
+        });
+        $('#options-view-button').on('click', function(e) {
+            e.stopPropagation();
+        });
+    }
 
-    $('#app-cover #options input[type="radio"]').on('change', function(e) {
-        $('#options-view-button').prop('checked', false);
-    });
 
-    $(document).on('click', function(e) {
-        $('#options-view-button').prop('checked', false);
-    });
-
-    $('#options-view-button').on('click', function(e) {
-        e.stopPropagation();
-    });
-
+    // Booking Process
+    if ($("#bookingBlock").length > 0) {
+        setTimeout(() => {
+            $('#loading').hide();
+            $('#bookingBlock').show();
+        }, 3000);
+        $(document).on('click', '[data-btn="details"]', function(e) {
+            $('html, body').animate({ scrollTop: 0 }, 0);
+            $('#bookingSteps ul li:nth-child(1)').removeClass('active').addClass('completed');
+            $('#bookingSteps ul li:nth-child(2)').addClass('active');
+            $('#seatsBlock').hide();
+            $('#seatsBtns').hide();
+            $('#detailsBlock').css('display', 'flex');
+            $('#bookingBtns').empty();
+            $('#bookingBtns').append(`<button data-btn="back-to-seats" class="btn btn-light-outline btn-md">Back</button><button data-btn="confirm" class="btn btn-primary btn-md">Next</button>`);
+        });
+        $(document).on('click', '[data-btn="back-to-seats"]', function(e) {
+            $('html, body').animate({ scrollTop: 0 }, 0);
+            $('#bookingSteps ul li:nth-child(1)').removeClass('completed').addClass('active');
+            $('#bookingSteps ul li:nth-child(2)').removeClass('active');
+            $('#seatsBlock').css('display', 'flex');
+            $('#seatsBtns').css('display', 'flex');
+            $('#detailsBlock').hide();
+            $('#bookingBtns').empty();
+            $('#bookingBtns').append(`<button data-btn="details" class="btn btn-primary btn-md">Next</button>`);
+        });
+        $(document).on('click', '[data-btn="confirm"]', function(e) {
+            $('#bookingSteps ul li:nth-child(2)').removeClass('active').addClass('completed');
+            $('#bookingSteps ul li:nth-child(3)').addClass('active');
+            $('html, body').animate({ scrollTop: 0 }, 0);
+            $('#detailsBlock').hide();
+            $('#detailsBtns').hide();
+            $('#confirmBlock').css('display', 'flex');
+            $('#bookingBtns').empty();
+            $('#bookingBtns').append(`<button data-btn="back-to-details" class="btn btn-light-outline btn-md">Back</button><button data-btn="thanks" class="btn btn-primary btn-md">Confirm and Pay</button>`);
+        });
+        $(document).on('click', '[data-btn="back-to-details"]', function(e) {
+            $('html, body').animate({ scrollTop: 0 }, 0);
+            $('#bookingSteps ul li:nth-child(2)').removeClass('completed').addClass('active');
+            $('#bookingSteps ul li:nth-child(3)').removeClass('active');
+            $('#detailsBlock').css('display', 'flex');
+            $('#detailsBtns').css('display', 'flex');
+            $('#confirmBlock').hide();
+            $('#bookingBtns').empty();
+            $('#bookingBtns').append(`<button data-btn="back-to-seats" class="btn btn-light-outline btn-md">Back</button><button data-btn="confirm" class="btn btn-primary btn-md">Next</button>`);
+        });
+        $(document).on('click', '[data-btn="thanks"]', function(e) {
+            $('html, body').animate({ scrollTop: 0 }, 0);
+            $('#confirmBlock').hide();
+            $('#bookingHeader').hide();
+            $('#bookingFooter').hide();
+            $('#thanksBlock').css('display', 'flex');
+        });
+    }
 })();

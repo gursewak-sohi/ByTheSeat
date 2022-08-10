@@ -31,12 +31,12 @@
 }
 
 .booking-block {
-    display: flex;
-    flex-direction: column;
+    display: none;
     max-width: 1038px;
     margin: 0 auto 20px;
     padding-bottom: 91px;
     border-bottom: 1px solid #E5E7EB;
+    animation: moveUpLess 300ms ease;
     @include tablet {
         border-bottom: none;
         padding-bottom: 0;
@@ -124,7 +124,11 @@
         flex-direction: column-reverse;
     }
     &.shared-header {
+        padding: 48px 25px 33px 25px;
         justify-content: center;
+        @include tablet {
+            padding: 28px 12px 12px;
+        }
     }
     & .booking-avaition {
         @include tablet {
@@ -212,18 +216,11 @@
         border-bottom: 1px solid $gray-200;
         flex-direction: column-reverse;
     }
-    &.shared-body {
-        padding: 41px 25px 31px;
-        @include tablet {
-            padding: 12px 0 24px;
-        }
-    }
 }
 
 .booking-gallery {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
     @include tablet {
         width: 100%;
         margin-bottom: 24px;
@@ -604,7 +601,7 @@
 
 .details-block {
     padding: 31px 25px;
-    display: flex;
+    display: none;
     flex-direction: column;
     @include tablet {
         padding: 24px 12px 0;
@@ -945,7 +942,7 @@
 
 .confirm-block {
     padding: 31px 25px;
-    display: flex;
+    display: none;
     flex-direction: column;
     @include tablet {
         padding: 24px 12px 24px;
