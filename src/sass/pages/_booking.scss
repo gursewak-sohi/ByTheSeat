@@ -609,7 +609,7 @@
     display: none;
     flex-direction: column;
     @include tablet {
-        padding: 24px 12px 0;
+        padding: 24px 12px 20px;
     }
 }
 
@@ -951,7 +951,6 @@
     flex-direction: column;
     @include tablet {
         padding: 24px 12px 24px;
-        border-bottom: 1px solid $gray-200;
     }
 }
 
