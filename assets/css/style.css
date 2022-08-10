@@ -5353,9 +5353,8 @@ footer {
   }
 }
 @media (max-width: 1024px) {
-  .booking-footer.sticky {
-    position: fixed;
-    transform: translateY(100%);
+  .booking-footer.static {
+    position: relative;
   }
 }
 .booking-footer .booking-flight-type {

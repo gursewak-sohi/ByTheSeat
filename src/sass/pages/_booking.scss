@@ -430,10 +430,9 @@
         flex-direction: column;
         z-index: 20;
     }
-    &.sticky {
+    &.static {
         @include tablet {
-            position: fixed;
-            transform: translateY(100%);
+            position: relative;
         }
     }
     & .booking-flight-type {
