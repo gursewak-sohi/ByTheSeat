@@ -271,22 +271,22 @@
 
 
     // Slide Booking Footer on Mobile
-    const slideBookingFooter = (bookingFooterID) => {
-        let FooterItem = document.querySelector(bookingFooterID),
-            lastScrollTop = 0;
-        if (FooterItem && window.innerWidth < 992) {
-            window.addEventListener("scroll", function() {
-                let scrollTopPos = window.pageYOffset || document.documentElement.scrollTop;
-                if (scrollTopPos > lastScrollTop) {
-                    FooterItem.classList.add('hide');
-                } else {
-                    FooterItem.classList.remove('hide');
-                }
-                lastScrollTop = scrollTopPos <= 0 ? 0 : scrollTopPos; // For Mobile or negative scrolling
-            }, false);
-        }
-    }
-    slideBookingFooter('#bookingFooter');
+    // const slideBookingFooter = (bookingFooterID) => {
+    //     let FooterItem = document.querySelector(bookingFooterID),
+    //         lastScrollTop = 0;
+    //     if (FooterItem && window.innerWidth < 992) {
+    //         window.addEventListener("scroll", function() {
+    //             let scrollTopPos = window.pageYOffset || document.documentElement.scrollTop;
+    //             if (scrollTopPos > lastScrollTop) {
+    //                 FooterItem.classList.add('sticky');
+    //             } else {
+    //                 FooterItem.classList.remove('sticky');
+    //             }
+    //             lastScrollTop = scrollTopPos <= 0 ? 0 : scrollTopPos; // For Mobile or negative scrolling
+    //         }, false);
+    //     }
+    // }
+    // slideBookingFooter('#bookingFooter');
 
     // Show hide Pet Block
     if ($("#petRadio").length > 0 && $("#petBlock").length > 0 && $("#petNote").length > 0) {

@@ -5117,7 +5117,6 @@ footer {
 @media (max-width: 1024px) {
   .booking-body {
     padding: 12px 0 24px;
-    border-bottom: 1px solid #E5E7EB;
     flex-direction: column-reverse;
   }
 }
@@ -5344,7 +5343,7 @@ footer {
 }
 @media (max-width: 1024px) {
   .booking-footer {
-    position: fixed;
+    position: sticky;
     bottom: 0;
     left: 0;
     right: 0;
@@ -5353,8 +5352,11 @@ footer {
     z-index: 20;
   }
 }
-.booking-footer.hide {
-  transform: translateY(100%);
+@media (max-width: 1024px) {
+  .booking-footer.sticky {
+    position: fixed;
+    transform: translateY(100%);
+  }
 }
 .booking-footer .booking-flight-type {
   display: flex;
